@@ -1,0 +1,343 @@
+<!doctype html>
+<!-- LeaderAI · salchiarenza.ai -->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coach Giovy – Trova il tuo Blocco Madre</title>
+<meta name="description" content="Per tennisti adulti che in allenamento giocano bene e in partita si bloccano. Diagnosi gratuita di 30 minuti online con Coach Giovy.">
+<link rel="icon" href="img/logo.png">
+<style>
+:root{--navy:#050A30;--navy2:#0b1446;--giallo:#FFFF00;--bianco:#fff;--testo:#d9dcec;--grigio:#9aa0bd}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--bianco);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.giallo{color:var(--giallo)}
+h1,h2,h3{line-height:1.12;margin:0 0 .5em;font-weight:900;letter-spacing:-.01em}
+h1{font-size:clamp(34px,5.6vw,60px)}
+h2{font-size:clamp(28px,4vw,44px)}
+h3{font-size:22px}
+p{margin:0 0 1em;color:var(--testo)}
+.eyebrow{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--giallo);margin-bottom:14px}
+section{padding:72px 0}
+.alt{background:var(--navy2)}
+
+/* pulsanti */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--giallo);color:var(--navy);font-weight:900;font-size:19px;text-decoration:none;padding:18px 30px;border-radius:12px;box-shadow:0 8px 28px rgba(255,255,0,.25);transition:transform .15s,box-shadow .15s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(255,255,0,.35)}
+.btn.out{background:transparent;color:var(--bianco);border:2px solid rgba(255,255,255,.55);box-shadow:none;font-weight:700}
+.btn.out:hover{border-color:var(--giallo);color:var(--giallo)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:8px}
+.nota{font-size:14px;color:var(--grigio);margin-top:12px}
+
+/* barra in alto */
+.top{position:sticky;top:0;z-index:20;background:rgba(5,10,48,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
+.brand img{width:36px;height:36px;border-radius:50%}
+.top .btn{padding:10px 18px;font-size:15px;box-shadow:none}
+
+/* apertura */
+.hero{padding:56px 0 64px;background:radial-gradient(1200px 500px at 80% 0%,rgba(255,170,40,.18),transparent 60%),var(--navy)}
+.hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.hero p.lead{font-size:21px;color:var(--bianco)}
+.hero .foto{border-radius:20px;overflow:hidden;border:3px solid var(--giallo);aspect-ratio:3/4;max-height:560px}
+.hero .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.punti{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:15px;color:var(--testo)}
+.punti span::before{content:"✓ ";color:var(--giallo);font-weight:900}
+
+/* video */
+.video{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.player{position:relative;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,0,.6);background:#000;aspect-ratio:9/16;max-height:640px;margin:0 auto;width:100%;max-width:360px}
+.player video{width:100%;height:100%;object-fit:cover}
+
+/* slide */
+.slide{border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.lista{list-style:none;padding:0;margin:0 0 1.2em}
+.lista li{padding:10px 0 10px 34px;position:relative;color:var(--bianco);border-bottom:1px solid rgba(255,255,255,.08)}
+.lista li::before{content:"";position:absolute;left:4px;top:19px;width:12px;height:12px;background:var(--giallo);border-radius:3px}
+
+/* metodo */
+.campo{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:28px 0 30px}
+.lettera{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px 18px}
+.lettera b{display:block;font-size:46px;line-height:1;color:var(--giallo);font-weight:900;margin-bottom:10px}
+.lettera h3{font-size:18px;margin-bottom:6px}
+.lettera p{font-size:15px;margin:0}
+
+/* settimane */
+.settimane{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.sett{background:var(--navy);border-radius:16px;padding:24px;border-top:4px solid var(--giallo)}
+.sett small{color:var(--giallo);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+.sett h3{margin-top:8px}
+.promessa{font-size:22px;font-weight:700;color:var(--bianco);border-left:5px solid var(--giallo);padding:6px 0 6px 18px;margin:26px 0}
+
+/* recensioni */
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.testim{margin:0;background:var(--navy);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,0,.35)}
+.testim video{width:100%;aspect-ratio:16/9;display:block;background:#000;object-fit:cover}
+.testim figcaption{padding:16px 18px 20px;font-size:15px;line-height:1.5;color:var(--testo)}
+.testim figcaption b{color:var(--giallo)}
+
+/* faq */
+details{border-bottom:1px solid rgba(255,255,255,.12);padding:16px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--giallo);font-weight:900;font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0}
+
+/* fascia finale */
+.finale{background:var(--giallo);color:var(--navy);text-align:center;padding:70px 0}
+.finale h2{color:var(--navy)}
+.finale p{color:#1d2250;font-size:20px}
+.finale .btn{background:var(--navy);color:var(--giallo);box-shadow:0 10px 30px rgba(5,10,48,.35)}
+
+footer{padding:44px 0 110px;font-size:15px;color:var(--grigio)}
+footer a{color:var(--bianco)}
+.legale{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;line-height:1.55}
+.legale p{color:var(--grigio);margin:0 0 10px}
+.social{display:flex;flex-wrap:wrap;gap:10px 18px;margin:12px 0 18px}
+.social a{text-decoration:none;font-weight:700}
+.social a:hover{color:var(--giallo)}
+
+/* pulsante fisso su telefono */
+.fisso{display:none}
+
+@media (max-width:860px){
+  body{font-size:17px}
+  section{padding:54px 0}
+  .hero .grid,.video,.split{grid-template-columns:1fr;gap:28px}
+  .hero{padding-top:36px}
+  .hero .foto{aspect-ratio:auto;height:340px;max-height:none;width:100%}
+  .hero .foto img{object-position:50% 18%}
+  .campo{grid-template-columns:1fr 1fr}
+  .settimane,.rec{grid-template-columns:1fr}
+  .rec .box{aspect-ratio:auto;min-height:120px}
+  .duo{grid-template-columns:1fr}
+  .btn{width:100%}
+  .top .btn{width:auto}
+  .fisso{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(5,10,48,.95);border-top:1px solid rgba(255,255,0,.3)}
+  .fisso .btn{padding:15px;font-size:17px}
+}
+@media (max-width:420px){.campo{grid-template-columns:1fr}.top .btn{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inizio"><img src="img/logo.png" alt="">Coach Giovy</a>
+    <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi</a>
+  </div>
+</header>
+
+<main id="inizio">
+
+<!-- APERTURA -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Per tennisti adulti che in partita si bloccano</span>
+      <h1>Non sei bloccato perché ti manca <span class="giallo">talento.</span></h1>
+      <p class="lead">Forse stai cercando di correggere il punto sbagliato. Il colpo che sbagli quasi mai è il problema: è l'ultimo anello di una catena che parte prima. Io lo chiamo <b class="giallo">Blocco Madre™</b>.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi gratuita →</a>
+        <a class="btn out" href="https://wa.me/393517940376?text=TENNIS" target="_blank" rel="noopener">Scrivimi TENNIS su WhatsApp</a>
+      </div>
+      <div class="punti"><span>Gratis</span><span>30 minuti</span><span>In videochiamata</span><span>Da qualsiasi paese</span></div>
+      <p class="nota">I dati della prenotazione servono solo a fissare la call. <a href="privacy.html" style="color:var(--grigio)">Privacy</a></p>
+    </div>
+    <div class="foto"><img src="img/coach.jpg" alt="Coach Giovy, Giovanni Leto, in campo"></div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="alt" id="video">
+  <div class="wrap video">
+    <div class="player">
+      <video controls preload="none" playsinline poster="img/video-poster.jpg"
+        src="video/video-manifesto.mp4"></video>
+    </div>
+    <div>
+      <span class="eyebrow">Guarda il video · 4 minuti</span>
+      <h2>Il colpo che vedi sbagliare <span class="giallo">non è il problema.</span></h2>
+      <p>In questo video ti racconto come sono arrivato al Blocco Madre e come lo trovo. Tu vedi il rovescio che crolla. Io vedo il piede che si è fermato mezzo secondo prima.</p>
+      <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Voglio trovare il mio Blocco Madre →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TI RICONOSCI -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Ti riconosci?</span>
+    <h2>In allenamento giochi bene. <span class="giallo">In partita sparisci.</span></h2>
+    <div class="duo" style="margin:26px 0 30px">
+      <div class="slide"><img src="img/slide-26.jpg" alt="In allenamento giochi bene. In partita sparisci." loading="lazy"></div>
+      <div class="slide"><img src="img/slide-29.jpg" alt="E proprio lì succede qualcosa" loading="lazy"></div>
+    </div>
+    <div class="split">
+      <div>
+        <p>Magari giochi al circolo una, due o tre volte a settimana. Hai preso lezioni, cambiato racchetta, guardato video su YouTube. Ma sotto sotto senti di essere sempre lì.</p>
+        <ul class="lista">
+          <li>Il servizio che entrava si spegne sulla rete.</li>
+          <li>Arrivi leggermente tardi e stringi il braccio.</li>
+          <li>Dopo due errori non giochi più per vincere: giochi per non sbagliare.</li>
+        </ul>
+      </div>
+      <div class="slide"><img src="img/slide-4.jpg" alt="Stai cercando di correggere il punto sbagliato" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSI -->
+<section class="alt">
+  <div class="wrap split">
+    <div class="slide"><img src="img/slide-49.jpg" alt="Prima della correzione serve una diagnosi" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Il punto di svolta</span>
+      <h2>Prima della correzione <span class="giallo">serve una diagnosi.</span></h2>
+      <p>Nel tennis degli adulti non puoi correggere bene qualcosa se prima non hai capito da dove nasce davvero l'errore. Ogni consiglio può essere giusto, preso da solo: ma se non sai qual è la tua priorità, ogni consiglio diventa rumore.</p>
+      <p class="promessa">Una priorità, non dieci difetti.</p>
+      <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi gratuita →</a>
+    </div>
+  </div>
+</section>
+
+<!-- METODO -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Il Metodo C.A.M.P.O.™</span>
+    <h2>Non è un nome messo lì per fare marketing. <span class="giallo">È una sequenza.</span></h2>
+    <div class="campo">
+      <div class="lettera"><b>C</b><h3>Chiarezza</h3><p>Qual è il blocco. Uno solo, non dieci.</p></div>
+      <div class="lettera"><b>A</b><h3>Analisi video</h3><p>Il tuo tennis vero, non quello delle lezioni.</p></div>
+      <div class="lettera"><b>M</b><h3>Movimento</h3><p>Appoggi e tempi, perché lì nasce quasi tutto.</p></div>
+      <div class="lettera"><b>P</b><h3>Piano pratico</h3><p>Adattato ai tuoi orari, non a quelli di un professionista.</p></div>
+      <div class="lettera"><b>O</b><h3>Obiettivo</h3><p>Un numero in partita che puoi contare da solo.</p></div>
+    </div>
+    <div class="slide"><img src="img/slide-54.jpg" alt="Dentro Tennis Power usiamo il Metodo C.A.M.P.O." loading="lazy"></div>
+  </div>
+</section>
+
+<!-- RESET TENNIS 30 -->
+<section class="alt" id="reset">
+  <div class="wrap">
+    <span class="eyebrow">Il percorso</span>
+    <h2>Reset Tennis 30™: <span class="giallo">quattro settimane, uno a uno, tutto online.</span></h2>
+    <div class="settimane">
+      <div class="sett"><small>Settimana 1</small><h3>Trovo il tuo Blocco Madre</h3><p>E ti do una priorità sola su cui lavorare.</p></div>
+      <div class="sett"><small>Settimane 2 e 3</small><h3>Esercizi brevi</h3><p>Adatti al tempo che hai davvero, con la verifica sui tuoi video.</p></div>
+      <div class="sett"><small>Settimana 4</small><h3>Partita vera</h3><p>Giochi e misuriamo cosa è cambiato, con un numero.</p></div>
+    </div>
+    <p class="promessa">Non ti prometto la classifica e non ti prometto di vincere di più: ti prometto che saprai su cosa stai lavorando e perché.</p>
+    <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Si parte dalla diagnosi gratuita →</a>
+    <p class="nota">Il prezzo te lo dico in call, dopo la diagnosi: prima capiamo se ha senso lavorare insieme.</p>
+  </div>
+</section>
+
+<!-- CHI SONO -->
+<section>
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Chi sono</span>
+      <h2>Mi chiamo Giovanni Leto. <span class="giallo">Coach Giovy.</span></h2>
+      <p>Ho iniziato a dieci anni e per anni il campo è stato tutto. Poi gli infortuni hanno chiuso il sogno di diventare professionista, e ci ho messo tempo a capire una cosa semplice: non dovevo essere io in campo per essere utile.</p>
+      <p>Ho allenato in Italia, in Vietnam, in Thailandia e negli ultimi anni in un circolo in Calabria. E allenando adulti ho visto sempre lo stesso schema: persone motivate, che amano davvero il tennis, bloccate non per mancanza di voglia, ma perché si allenano sul problema sbagliato.</p>
+      <p class="promessa">Tu vedi il rovescio che crolla. Io vedo il piede che si è fermato mezzo secondo prima.</p>
+    </div>
+    <div class="slide"><img src="img/slide-39.jpg" alt="Perché ho creato Reset Tennis 30" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- RECENSIONI: allieve del corso Tennis Power Formula, Bangkok, 17/10/2025. Pubblicare solo con il consenso scritto di ciascuna. -->
+<section class="alt" id="recensioni">
+  <div class="wrap">
+    <span class="eyebrow">Cosa dicono gli allievi</span>
+    <h2>Il corso di Bangkok, <span class="giallo">raccontato da chi c'era.</span></h2>
+    <p>Recensioni registrate a fine corso Tennis Power Formula, a Bangkok, nell'ottobre 2025. Ognuna parla nella sua lingua: sotto trovi la traduzione in italiano.</p>
+    <div class="rec">
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-giappone.jpg" src="video/recensione-giappone.mp4"></video>
+        <figcaption><b>Allieva dal Giappone</b> · in giapponese<br>«Con il programma di sei settimane ho imparato tantissimo. Prima mi allenavo senza nessuna continuità; con il coach ho trovato stabilità di palla, chiarezza e fiducia. Abbiamo lavorato soprattutto sul passaggio dal servizio alla volée e sulla risposta alle palle veloci: oggi le gioco con sicurezza.»</figcaption>
+      </figure>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-fon-thailandia.jpg" src="video/recensione-fon-thailandia.mp4"></video>
+        <figcaption><b>Fon, Thailandia</b> · in thailandese<br>«Le tecniche e il modo di pensare il gioco che ho imparato con il coach Giovanni Leto hanno cambiato il mio tennis rispetto a quello che avevo studiato prima. Grazie davvero: lo consiglio a tutti.»</figcaption>
+      </figure>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-inglese.jpg" src="video/recensione-inglese.mp4"></video>
+        <figcaption><b>Allieva di livello intermedio</b> · in inglese<br>«Dopo sei-sette settimane sono migliorata molto nei colpi da fondo, nel fisico e nel gioco: sono più costante. Lo consiglio ai principianti e anche ai giocatori intermedi come me. È davvero bravo.»</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Domande frequenti</span>
+    <h2>Prima di prenotare</h2>
+    <details><summary>Com'è fatta la diagnosi gratuita?</summary><p>Trenta minuti in videochiamata con Google Meet. Guardiamo il tuo gioco insieme, ti faccio qualche domanda e ti dico cosa vedo. Se ha senso lavorare insieme te lo dico; se non ha senso, te lo dico lo stesso.</p></details>
+    <details><summary>Devo essere un giocatore forte?</summary><p>No. Il percorso è per adulti che giocano al circolo, fanno qualche torneo o le sfide con gli amici, e sentono di essere fermi allo stesso livello.</p></details>
+    <details><summary>Quanto tempo serve a settimana?</summary><p>Poco, ma fatto bene: esercizi brevi costruiti sui tuoi orari reali. L'idea è fare meno cose, ma quelle giuste.</p></details>
+    <details><summary>Vivo all'estero o viaggio spesso: funziona lo stesso?</summary><p>Sì, è tutto online. La pagina di prenotazione ti mostra gli orari nel tuo fuso orario.</p></details>
+    <details><summary>Quanto costa Reset Tennis 30?</summary><p>Te lo dico in call, dopo la diagnosi. Prima capiamo insieme qual è il tuo Blocco Madre e se il percorso fa per te.</p></details>
+  </div>
+</section>
+
+<!-- ENGLISH -->
+<section class="alt" id="english">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">In English</span>
+      <h2>Your stroke is not the problem. <span class="giallo">Find your Mother Block.</span></h2>
+      <p>If you train, take lessons and still freeze at the same moments in matches, you are probably not missing another drill. You are missing the one error that drives all the others.</p>
+      <p><b>Reset Tennis 30™</b> is a four-week, one-to-one online program for adult players. It always starts with a free 30-minute video call, and the booking page shows the times in your own time zone.</p>
+      <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Book your free call →</a>
+    </div>
+    <div class="slide"><img src="img/slide-57.jpg" alt="One priority, not ten flaws" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- FASCIA FINALE -->
+<section class="finale">
+  <div class="wrap">
+    <h2>Smetti di correggere sintomi.</h2>
+    <p>Scopri qual è il tuo Blocco Madre in 30 minuti, gratis.</p>
+    <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi gratuita →</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#inizio"><img src="img/logo.png" alt="">Coach Giovy · Tennis Power</a>
+    <div class="social">
+      <a href="https://www.instagram.com/coach_giovy/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61582420236286" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@tennispowerformulaclub3" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@TennisPowerFormulaClub" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://x.com/GiovyTennis" target="_blank" rel="noopener">X</a>
+      <a href="https://www.linkedin.com/in/coach-giovy-leto-53047738b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p>WhatsApp: <a href="https://wa.me/393517940376?text=TENNIS">+39 351 794 0376</a> · Email: <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> · <a href="https://drive.google.com/file/d/1K6aGOodarD0te33HULydcVRfUlm4K-37/view" target="_blank" rel="noopener">Guida gratuita in PDF</a> · <a href="https://forms.gle/74oSmJarqbcMJwJe6" target="_blank" rel="noopener">Preferisci essere ricontattato?</a></p>
+    <div class="legale">
+      <p>I risultati raccontati dagli allievi dipendono da fattori individuali e non costituiscono garanzia di risultato. La diagnosi gratuita costa zero euro e non comporta alcun obbligo di acquisto. Coach Giovy propone anche servizi a pagamento, come il percorso Reset Tennis 30™: le condizioni ti vengono comunicate per iscritto prima di qualsiasi acquisto. Percorso riservato ai maggiorenni; le indicazioni non sostituiscono il parere del medico.</p>
+      <p>Le testimonianze sono di allieve reali del corso Tennis Power Formula di Bangkok (ottobre 2025), pubblicate con il loro consenso.</p>
+      <p>Questa pagina non fa parte di Meta, LinkedIn, Google, TikTok o X e non è sponsorizzata né approvata da loro. Facebook, Instagram e WhatsApp sono marchi di Meta Platforms, Inc.; LinkedIn è un marchio di LinkedIn Corporation; YouTube è un marchio di Google LLC; TikTok è un marchio di ByteDance Ltd.; X è un marchio di X Corp.</p>
+      <p>This page is not part of Meta, LinkedIn, Google, TikTok or X and is not endorsed by them in any way.</p>
+      <p>© 2026 Giovanni Leto · Coach Giovy · Via Renato Guttuso 1, 88900 Crotone (KR) · C.F. LTEGNN71M08D122G · <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="privacy.html#cookie">Cookie Policy</a> · <a href="termini.html">Termini e Condizioni</a></p>
+    </div>
+  </div>
+</footer>
+
+<div class="fisso"><a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi gratuita →</a></div>
+
+</body>
+</html>
