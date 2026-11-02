@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video gratuito: perché il tuo tennis si blocca</title>
+<meta name="description" content="Presentazione gratuita di Coach Giovy per tennisti adulti di circolo: il Blocco Madre e il Metodo C.A.M.P.O.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Video gratuito: perché il tuo tennis si blocca">
+<meta property="og:image" content="https://coachgiovy841-del.github.io/img/coach.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="funnel.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="brand"><img src="img/logo.png" alt="">Coach Giovy</span></div></header>
+
+<main>
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Per tennisti adulti di circolo</span>
+      <h1>Scopri perché il tuo tennis <span class="giallo">si blocca nei momenti che contano.</span></h1>
+      <p class="lead">Una presentazione gratuita con Coach Giovy per capire la differenza tra il colpo che sbagli e il problema che lo fa cedere.</p>
+      <button class="btn" type="button" data-apri>Guarda il video gratuito</button>
+      <p class="nota">Circa 12 minuti · gratis · ti arriva anche via email</p>
+    </div>
+    <div class="foto"><img src="img/coach.jpg" alt="Coach Giovy in campo"></div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap stretto">
+    <h2>Nel video scopri come</h2>
+    <ul class="lista">
+      <li>Riconoscere i segnali del tuo Blocco Madre.</li>
+      <li>Capire perché tanti consigli possono farti perdere la priorità.</li>
+      <li>Scoprire come funziona il Metodo C.A.M.P.O. e da dove partire.</li>
+    </ul>
+    <p class="cred">Coach Giovy: 25 anni da allenatore, in Italia e nel Sud-est asiatico, dai principianti ai giocatori di alto livello. Istruttore di 1° grado della Federazione Italiana Tennis.</p>
+    <p style="margin-top:22px"><button class="btn" type="button" data-apri>Guarda il video gratuito</button></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Il video è gratuito e non comporta alcun obbligo di acquisto. Percorsi riservati ai maggiorenni.</p>
+    <p>Questa pagina non fa parte di Meta, Google, TikTok o X e non è sponsorizzata né approvata da loro.</p>
+    <p>© 2026 Giovanni Leto · Coach Giovy · <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="privacy.html#cookie">Cookie Policy</a> · <a href="termini.html">Termini e Condizioni</a></p>
+  </div>
+</footer>
+
+<div class="velo" id="velo" role="dialog" aria-modal="true" aria-labelledby="titolo-modulo">
+  <form class="modulo" id="modulo" novalidate>
+    <button class="chiudi" type="button" aria-label="Chiudi" data-chiudi>×</button>
+    <h2 id="titolo-modulo">Dove ti mando il video?</h2>
+    <p>Lo guardi subito nella pagina successiva e ti arriva anche via email.</p>
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" autocomplete="given-name" required>
+    <label for="email">Email a cui inviare il video</label>
+    <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
+    <label for="telefono">Telefono con prefisso internazionale</label>
+    <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+39 333 1234567">
+    <div class="aiuto">Facoltativo, se desideri essere ricontattato per la diagnosi.</div>
+    <div class="trappola" aria-hidden="true"><label for="sito">Sito</label><input type="text" id="sito" name="sito" tabindex="-1" autocomplete="off"></div>
+    <label class="scelta"><input type="checkbox" id="privacy" required> <span>Ho letto l’<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</span></label>
+    <label class="scelta"><input type="checkbox" id="marketing"> <span>Desidero ricevere via email consigli sul tennis, approfondimenti sul metodo e informazioni sui percorsi di Coach Giovy. Posso disiscrivermi in qualsiasi momento.</span></label>
+    <div class="aiuto">Il video è gratuito. Puoi riceverlo anche senza scegliere le email di consigli e novità.</div>
+    <button class="btn" type="submit" id="invia">Guarda il video gratuito</button>
+    <div class="errore" id="errore" role="alert"></div>
+  </form>
+</div>
+
+<script>
+// URL /exec dell'app web Apps Script «Coach Giovy – Mailing list» (funnel-vsl.gs).
+var APP_WEB = 'https://script.google.com/macros/s/AKfycbwlHvx2YS1gs6gMp8uABJ0IOyPddcCSTr8Yf8B0y3kzy8Sx8E0BjAoMCmCX_fZ6MduxsQ/exec';
+var velo = document.getElementById('velo');
+var modulo = document.getElementById('modulo');
+var errore = document.getElementById('errore');
+document.querySelectorAll('[data-apri]').forEach(function (b) {
+  b.addEventListener('click', function () { velo.classList.add('aperto'); document.getElementById('nome').focus(); });
+});
+document.querySelector('[data-chiudi]').addEventListener('click', function () { velo.classList.remove('aperto'); });
+velo.addEventListener('click', function (e) { if (e.target === velo) velo.classList.remove('aperto'); });
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') velo.classList.remove('aperto'); });
+
+// Fonte e campagna dagli UTM dell'annuncio (nessun dato personale nell'URL).
+var q = new URLSearchParams(location.search);
+var fonte = q.get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'diretto');
+var campagna = [q.get('utm_campaign'), q.get('utm_content')].filter(Boolean).join(' · ');
+
+modulo.addEventListener('submit', function (e) {
+  e.preventDefault();
+  errore.textContent = '';
+  var nome = document.getElementById('nome').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var tel = document.getElementById('telefono').value.trim();
+  if (!nome) return mostra('Scrivi il tuo nome.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return mostra('Scrivi un indirizzo email valido.');
+  if (tel && !/^\+?[0-9 ]{8,16}$/.test(tel)) return mostra('Scrivi il telefono con il prefisso, es. +39 333 1234567, oppure lascialo vuoto.');
+  if (!document.getElementById('privacy').checked) return mostra('Per ricevere il video spunta la presa visione dell’informativa privacy.');
+  if (!APP_WEB) return mostra('Modulo non ancora collegato. Scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
+  var b = document.getElementById('invia');
+  b.disabled = true; b.textContent = 'Un attimo…';
+  fetch(APP_WEB, {method: 'POST', body: JSON.stringify({
+    nome: nome, email: email, telefono: tel,
+    privacy: true, marketing: document.getElementById('marketing').checked,
+    sito: document.getElementById('sito').value, fonte: fonte, campagna: campagna
+  })}).then(function (r) { return r.json(); }).then(function (r) {
+    if (!r.ok) throw new Error(r.errore);
+    location.href = 'video.html';
+  }).catch(function () {
+    b.disabled = false; b.textContent = 'Guarda il video gratuito';
+    mostra('Qualcosa non ha funzionato. Riprova tra un minuto o scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
+  });
+});
+function mostra(t) { errore.textContent = t; }
+</script>
+</body>
+</html>
