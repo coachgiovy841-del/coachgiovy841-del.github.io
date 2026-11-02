@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guarda il video – Coach Giovy</title>
+<meta name="description" content="Prima di correggere un colpo, trova il tuo Blocco Madre. Presentazione gratuita di Coach Giovy.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="funnel.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="brand"><img src="img/logo.png" alt="">Coach Giovy</span></div></header>
+
+<main>
+<section>
+  <div class="wrap stretto">
+    <span class="passo">Passo 1: guarda ora il video</span>
+    <h1>Prima di correggere un colpo, <span class="giallo">trova il tuo Blocco Madre.</span></h1>
+    <p class="avviso">Non chiudere questa pagina: alla fine del video trovi il passo successivo.</p>
+    <div class="schermo" id="schermo">
+      <div class="segnaposto" id="segnaposto"><b>Il video è in preparazione</b><p>A breve qui trovi la presentazione completa. Intanto puoi prenotare la diagnosi gratuita qui sotto.</p></div>
+    </div>
+    <p class="nota">Guarda la presentazione. Poi, se ti riconosci negli esempi, possiamo parlarne nella diagnosi gratuita.</p>
+  </div>
+</section>
+
+<div class="dopo" id="dopo">
+  <section class="alt">
+    <div class="wrap stretto">
+      <span class="passo">Passo 2: prenota la diagnosi gratuita</span>
+      <h2>Parliamo del tuo tennis.</h2>
+      <p>Scegli un orario per una videochiamata gratuita di 30 minuti. La diagnosi serve a capire cosa ti blocca e se ha senso lavorare insieme. Non è una call di vendita: se non posso aiutarti, te lo dico.</p>
+      <div class="cta"><a class="btn" data-prenota href="#">Prenota la diagnosi gratuita</a><p class="nota">30 minuti online con Coach Giovy, senza obbligo di acquisto.</p></div>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-allievo.jpg" src="video/recensione-allievo.mp4"></video>
+        <figcaption><b>Allievo del corso</b> · in inglese<br>«Prima di Tennis Power Formula ero incostante e non avevo un vero piano di allenamento. Dopo circa sei settimane sono diventato molto più costante e anche più forte mentalmente in campo: le tecniche di respirazione e di mentalità mi aiutano a restare calmo sotto pressione.»</figcaption>
+      </figure>
+      <div class="cta"><a class="btn" data-prenota href="#">Scegli giorno e ora</a></div>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-giappone.jpg" src="video/recensione-giappone.mp4"></video>
+        <figcaption><b>Allieva dal Giappone</b> · in giapponese<br>«Prima mi allenavo senza nessuna continuità. Con il coach ho trovato stabilità di palla, chiarezza e fiducia. Abbiamo lavorato soprattutto sul passaggio dal servizio alla volée e sulla risposta alle palle veloci: oggi le gioco con sicurezza.»</figcaption>
+      </figure>
+      <div class="cta"><a class="btn" data-prenota href="#">Prenota la diagnosi gratuita</a></div>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-fon-thailandia.jpg" src="video/recensione-fon-thailandia.mp4"></video>
+        <figcaption><b>Fon, Thailandia</b> · in thailandese<br>«Le tecniche e il modo di pensare il gioco che ho imparato hanno cambiato completamente il mio tennis rispetto a quello che avevo studiato prima. Consiglio a tutti di conoscere Tennis Power Formula.»</figcaption>
+      </figure>
+      <div class="cta"><a class="btn" data-prenota href="#">Scegli giorno e ora</a></div>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-inglese.jpg" src="video/recensione-inglese.mp4"></video>
+        <figcaption><b>Allieva, livello intermedio</b> · in inglese<br>«Dopo sei-sette settimane con Coach Giovanni sono migliorata molto nei colpi da fondo, nel fisico e nel gioco: sono più costante. È davvero bravo.»</figcaption>
+      </figure>
+      <div class="cta"><a class="btn" data-prenota href="#">Prenota la diagnosi gratuita</a></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>I risultati raccontati dagli allievi dipendono da fattori individuali e non costituiscono garanzia di risultato. Le testimonianze sono di allievi reali del corso Tennis Power Formula di Bangkok (ottobre 2025), pubblicate con il loro consenso. La diagnosi gratuita non comporta alcun obbligo di acquisto.</p>
+    <p>Questa pagina non fa parte di Meta, Google, TikTok o X e non è sponsorizzata né approvata da loro.</p>
+    <p>© 2026 Giovanni Leto · Coach Giovy · <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> · <a href="privacy.html">Privacy Policy</a> · <a href="privacy.html#cookie">Cookie Policy</a> · <a href="termini.html">Termini e Condizioni</a></p>
+  </div>
+</footer>
+
+<script>
+// VSL montato: uno o piu' .mp4 in fila (tempo di visione misurato su tutte le parti)
+// oppure un link incorporabile (YouTube/Vimeo/Loom, tempo sulla pagina).
+// Vuoto = segnaposto, funnel non attivabile. Una parte per blocco del copione,
+// sotto i 10 MB perche' il sito si aggiorna dal caricamento web di GitHub (02/11/2026).
+var VSL = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(function (i) { return 'video/vsl-' + i + '.mp4'; });
+var CALENDARIO = 'https://calendar.app.google/vhpC8xXXcmGHWAYC7';
+// Pulsante dopo circa 10 minuti di visione reale (corso ILP L20); ?cta=N solo per le prove.
+var q = new URLSearchParams(location.search);
+var SOGLIA = Number(q.get('cta')) || 600;
+// Solo prove: un file della cartella video/ (niente indirizzi esterni dall'URL).
+if (/^video\/[\w-]+\.mp4$/.test(q.get('vsl') || '')) VSL = q.get('vsl');
+var parti = Array.isArray(VSL) ? VSL : (VSL ? [VSL] : []);
+
+document.querySelectorAll('[data-prenota]').forEach(function (a) { a.href = CALENDARIO; });
+var dopo = document.getElementById('dopo');
+function sblocca() { dopo.classList.add('visibile'); }
+
+var schermo = document.getElementById('schermo');
+if (!parti.length) {
+  sblocca();
+} else if (parti.every(function (p) { return /\.mp4(\?|$)/i.test(p); })) {
+  schermo.innerHTML = '<video id="vsl" playsinline autoplay muted preload="auto" src="' + parti[0] + '"></video>' +
+    '<button class="audio" id="audio" type="button"><span>▶ Clicca per guardare con l’audio</span></button>';
+  var v = document.getElementById('vsl');
+  var visti = 0, ultimo = null, n = 0, pronta = null;
+  function parte(i, daCapo) {
+    n = i; ultimo = null; v.src = parti[i];
+    if (daCapo) v.currentTime = 0;
+    v.play();
+  }
+  document.getElementById('audio').addEventListener('click', function () {
+    v.muted = false; v.controls = true; visti = 0; parte(0, true); this.remove();
+  });
+  v.addEventListener('timeupdate', function () {
+    if (!v.muted && !v.paused && ultimo !== null) {
+      var d = v.currentTime - ultimo;
+      if (d > 0 && d < 2) visti += d;   // solo visione vera, non salti in avanti
+    }
+    ultimo = v.currentTime;
+    // scarica in anticipo la parte successiva, cosi' il passaggio non si ferma
+    if (n + 1 < parti.length && pronta !== n + 1 && v.duration - v.currentTime < 20) {
+      pronta = n + 1;
+      var pre = document.createElement('video'); pre.preload = 'auto'; pre.muted = true; pre.src = parti[n + 1];
+    }
+    if (visti >= SOGLIA) sblocca();
+  });
+  v.addEventListener('ended', function () {
+    if (n + 1 < parti.length) parte(n + 1); else sblocca();
+  });
+} else {
+  schermo.innerHTML = '<iframe src="' + parti[0] + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Video di Coach Giovy"></iframe>';
+  var inizio = Date.now();
+  var t = setInterval(function () {
+    if (!document.hidden && (Date.now() - inizio) / 1000 >= SOGLIA) { sblocca(); clearInterval(t); }
+  }, 1000);
+}
+</script>
+</body>
+</html>
