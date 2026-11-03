@@ -25,6 +25,11 @@
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     window.fbq('init', PIXEL);
     window.fbq('track', 'PageView');
+    // Conversione della campagna: iscrizione riuscita (iscrizione.html porta qui con ?iscritto=1).
+    if (/video\.html$/.test(location.pathname) && new URLSearchParams(location.search).has('iscritto')) {
+      window.fbq('track', 'Lead');
+      history.replaceState(null, '', location.pathname);  // un ricaricamento non conta due volte
+    }
   }
 
   // Revoca: si tolgono i cookie del pixel e si ricarica senza tracciamento.

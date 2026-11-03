@@ -108,7 +108,7 @@ modulo.addEventListener('submit', function (e) {
     sito: document.getElementById('sito').value, fonte: fonte, campagna: campagna
   })}).then(function (r) { return r.json(); }).then(function (r) {
     if (!r.ok) throw new Error(r.errore);
-    location.href = 'video.html';
+    location.href = 'video.html?iscritto=1';
   }).catch(function () {
     b.disabled = false; b.textContent = 'Guarda il video gratuito';
     mostra('Qualcosa non ha funzionato. Riprova tra un minuto o scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
