@@ -6,6 +6,9 @@
 <title>Coach Giovy – Trova il tuo Blocco Madre</title>
 <meta name="description" content="Per tennisti adulti che in allenamento giocano bene e in partita si bloccano. Diagnosi gratuita di 30 minuti online con Coach Giovy.">
 <link rel="icon" href="img/logo.png">
+<link rel="alternate" hreflang="it" href="https://coachgiovy841-del.github.io/">
+<link rel="alternate" hreflang="en" href="https://coachgiovy841-del.github.io/en/">
+<link rel="alternate" hreflang="es" href="https://coachgiovy841-del.github.io/es/">
 <style>
 :root{--navy:#050A30;--navy2:#0b1446;--giallo:#FFFF00;--bianco:#fff;--testo:#d9dcec;--grigio:#9aa0bd}
 *{box-sizing:border-box}
@@ -38,6 +41,11 @@ section{padding:72px 0}
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
 .brand img{width:36px;height:36px;border-radius:50%}
 .top .btn{padding:10px 18px;font-size:15px;box-shadow:none}
+.lingue{display:flex;gap:4px;margin-left:auto;margin-right:14px;font-size:14px;font-weight:800}
+.lingue b,.lingue a{padding:6px 8px;border-radius:8px;text-decoration:none}
+.lingue b{color:var(--navy);background:var(--giallo)}
+.lingue a{color:var(--bianco);border:1px solid rgba(255,255,255,.3)}
+.lingue a:hover{border-color:var(--giallo);color:var(--giallo)}
 
 /* apertura */
 .hero{padding:56px 0 64px;background:radial-gradient(1200px 500px at 80% 0%,rgba(255,170,40,.18),transparent 60%),var(--navy)}
@@ -133,6 +141,8 @@ footer a{color:var(--bianco)}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#inizio"><img src="img/logo.png" alt="">Coach Giovy</a>
+    <!-- Scelta della lingua (06/11/2026): pagine di vendita in inglese e spagnolo con le due guide. -->
+    <nav class="lingue" aria-label="Lingua"><b>IT</b><a href="en/" hreflang="en" lang="en">EN</a><a href="es/" hreflang="es" lang="es">ES</a></nav>
     <a class="btn" href="https://calendar.app.google/vhpC8xXXcmGHWAYC7" target="_blank" rel="noopener">Prenota la diagnosi</a>
   </div>
 </header>
@@ -370,6 +380,7 @@ footer a{color:var(--bianco)}
         <a class="btn" id="compra-playbook-en" href="https://buy.stripe.com/7sYdRaaZfcNofsp4l69bO03" target="_blank" rel="noopener">Get the Playbook · 27 €</a>
       </div>
       <p class="nota">Secure payment by card, Apple Pay or Link through Stripe; right after payment you get the link to download the PDF. Digital content: by downloading it immediately you waive the 14-day right of withdrawal (art. 59 Italian Consumer Code). See the <a href="termini.html#playbook-en">terms of sale</a>.</p>
+      <p><a href="en/">→ All the guides in English, with Match Fitness</a> · <a href="es/" lang="es">Guías en español</a></p>
     </div>
     <div class="slide"><img src="img/slide-57.jpg" alt="One priority, not ten flaws" loading="lazy"></div>
   </div>
