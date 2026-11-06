@@ -95,9 +95,8 @@ modulo.addEventListener('submit', function (e) {
   var nome = document.getElementById('nome').value.trim();
   var email = document.getElementById('email').value.trim();
   var tel = document.getElementById('telefono').value.trim();
-  if (!nome) return mostra('Scrivi il tuo nome.');
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return mostra('Scrivi un indirizzo email valido.');
-  if (tel && !/^\+?[0-9 ]{8,16}$/.test(tel)) return mostra('Scrivi il telefono con il prefisso, es. +39 333 1234567, oppure lascialo vuoto.');
+  var dubbio = controllaDati(nome, email, tel);
+  if (dubbio) return mostra(dubbio);
   if (!document.getElementById('privacy').checked) return mostra('Per ricevere il video spunta la presa visione dell’informativa privacy.');
   if (!APP_WEB) return mostra('Modulo non ancora collegato. Scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
   var b = document.getElementById('invia');
@@ -115,6 +114,46 @@ modulo.addEventListener('submit', function (e) {
   });
 });
 function mostra(t) { errore.textContent = t; }
+
+// Filtro dei dati finti o incompleti (06/11/2026). Stesse regole in funnel-vsl.gs.
+var FINTI = ['test', 'prova', 'asdf', 'qwerty', 'xxx', 'aaa', 'abc', 'nome', 'pippo'];
+var USA_E_GETTA = ['mailinator.com', 'yopmail.com', 'yopmail.fr', 'guerrillamail.com', 'sharklasers.com',
+  '10minutemail.com', 'temp-mail.org', 'tempmail.com', 'trashmail.com', 'getnada.com', 'dispostable.com',
+  'maildrop.cc', 'throwawaymail.com', 'fakeinbox.com', 'mintemail.com', 'mohmal.com', 'emailondeck.com'];
+var REFUSI = {'gmial.com': 'gmail.com', 'gmai.com': 'gmail.com', 'gmal.com': 'gmail.com', 'gamil.com': 'gmail.com',
+  'gmail.con': 'gmail.com', 'gmail.co': 'gmail.com', 'gmail.it': 'gmail.com', 'gmail.cm': 'gmail.com',
+  'hotmial.com': 'hotmail.com', 'hotmail.con': 'hotmail.com', 'hotmal.it': 'hotmail.it', 'yaho.it': 'yahoo.it',
+  'yahoo.con': 'yahoo.com', 'libero.com': 'libero.it', 'libreo.it': 'libero.it', 'outlok.it': 'outlook.it',
+  'outlook.con': 'outlook.com', 'icloud.con': 'icloud.com', 'virgilio.com': 'virgilio.it', 'tiscali.com': 'tiscali.it'};
+function telefonoFinto(tel) {
+  var c = tel.replace(/[^0-9+]/g, '');
+  if (!/^\+?[0-9]+$/.test(c)) return true;
+  var estero = false, n = c.replace(/^\+/, '');
+  if (c.charAt(0) === '+' || /^00/.test(n)) {
+    n = n.replace(/^00/, '');
+    if (/^39/.test(n)) n = n.slice(2); else estero = true;
+  } else if (/^0393\d{8,9}$/.test(n)) {
+    n = n.slice(3);  // «039» scritto al posto di +39 davanti al cellulare
+  }
+  if (/(\d)\1{5,}/.test(n)) return true;                 // 000000, 1111111…
+  if (n.replace(/(\d)(?=.*\1)/g, '').length < 3) return true;  // al massimo due cifre diverse
+  if (/0123456|1234567|2345678|3456789|9876543|8765432|7654321|6543210/.test(n)) return true;
+  if (estero) return n.length < 8 || n.length > 15;
+  if (/^3/.test(n)) return n.length < 9 || n.length > 10;  // cellulare italiano
+  if (/^0/.test(n)) return n.length < 6 || n.length > 11;  // fisso italiano
+  return true;
+}
+function controllaDati(nome, email, tel) {
+  var lettere = nome.replace(/[^A-Za-zÀ-ÿ]/g, '');
+  if (lettere.length < 2 || /[0-9@]/.test(nome) || FINTI.indexOf(nome.toLowerCase()) >= 0) return 'Scrivi il tuo nome vero.';
+  if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) return 'Scrivi un indirizzo email valido.';
+  var parti = email.toLowerCase().split('@');
+  if (REFUSI[parti[1]]) return 'Controlla l’email: forse intendevi ' + parti[0] + '@' + REFUSI[parti[1]] + '?';
+  if (USA_E_GETTA.indexOf(parti[1]) >= 0) return 'Usa un’email che controlli davvero: ti arriva lì il video.';
+  if (FINTI.indexOf(parti[0]) >= 0) return 'Scrivi un indirizzo email valido.';
+  if (tel && telefonoFinto(tel)) return 'Controlla il numero: sembra incompleto o non valido. Scrivilo con il prefisso, es. +39 333 1234567, oppure lascialo vuoto.';
+  return '';
+}
 </script>
 <script src="consenso.js"></script>
 </body>
