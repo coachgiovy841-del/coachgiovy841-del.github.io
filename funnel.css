@@ -86,3 +86,12 @@ footer a{color:var(--bianco)}
   .btn{width:100%}
   section{padding:30px 0}
 }
+/* Pacchetto 2 guide con prezzo barrato (video.html, 10/11/2026) */
+.coppia{display:flex;gap:12px;margin:0 0 18px}.coppia img{width:calc(50% - 6px);max-width:170px;border-radius:10px}
+.dopo h3{font-size:20px;margin:18px 0 6px}
+.offerta{border:2px solid var(--giallo);border-radius:14px;padding:16px 18px;margin:22px 0 4px;text-align:center;background:rgba(255,255,0,.05)}
+.offerta .voci{margin:0;font-size:15px;color:var(--testo)}
+.offerta .prezzi{margin:6px 0;line-height:1}
+.barrato{color:#ff3b3b;text-decoration:line-through;text-decoration-thickness:3px;font-size:28px;font-weight:800;margin-right:12px}
+.finale{color:var(--giallo);font-size:48px;font-weight:900}
+.sconto{display:inline-block;vertical-align:middle;background:#e21b1b;color:#fff;font-size:18px;font-weight:900;padding:4px 9px;border-radius:8px;margin-left:8px;transform:rotate(-4deg)}
