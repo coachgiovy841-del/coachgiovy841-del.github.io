@@ -95,3 +95,13 @@ footer a{color:var(--bianco)}
 .barrato{color:#ff3b3b;text-decoration:line-through;text-decoration-thickness:3px;font-size:28px;font-weight:800;margin-right:12px}
 .finale{color:var(--giallo);font-size:48px;font-weight:900}
 .sconto{display:inline-block;vertical-align:middle;background:#e21b1b;color:#fff;font-size:18px;font-weight:900;padding:4px 9px;border-radius:8px;margin-left:8px;transform:rotate(-4deg)}
+
+/* conto alla rovescia (conto-alla-rovescia.js) */
+[hidden]{display:none!important}
+.conto{margin:18px 0;text-align:center}
+.conto-titolo{margin:0 0 8px;font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--giallo)}
+.conto-cifre{display:flex;justify-content:center;gap:8px}
+.conto-cifre span{min-width:64px;padding:10px 6px;border:2px solid var(--giallo);border-radius:12px;background:var(--navy2);display:flex;flex-direction:column;align-items:center}
+.conto-cifre b{font-size:30px;font-weight:900;line-height:1;color:var(--bianco);font-variant-numeric:tabular-nums}
+.conto-cifre small{margin-top:4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grigio)}
+.conto[data-stato="chiusa"] .conto-titolo{font-size:18px}
