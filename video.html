@@ -8,6 +8,17 @@
 <meta name="robots" content="noindex">
 <link rel="icon" href="img/logo.png">
 <link rel="stylesheet" href="funnel.css?v=20261110b">
+<style>
+/* FAQ come nella home e garanzia vicino al pulsante (14/11/2026) */
+details{border-bottom:1px solid rgba(255,255,255,.12);padding:16px 0}
+summary{cursor:pointer;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px;color:var(--bianco)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--giallo);font-weight:900;font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0}
+.fiducia{font-size:15px;color:var(--testo);margin:10px auto 0;max-width:420px}
+.fiducia::before{content:"✓ ";color:var(--giallo);font-weight:900}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap"><span class="brand"><img src="img/logo.png" alt="">Coach Giovy</span></div></header>
@@ -30,32 +41,46 @@
   <section class="alt">
     <div class="wrap stretto">
       <span class="passo">Passo 2: parti questa settimana</span>
-      <h2>Le mie due guide, insieme. <span class="giallo">Tecnica e gambe, già in ordine.</span></h2>
+      <h2>Basta allenarti a caso. <span class="giallo">Ogni settimana sai cosa fare, e vedi se funziona.</span></h2>
       <p>Hai visto da dove nascono gli errori. Adesso ti serve un ordine: cosa fare questa settimana, quante volte, e come capire se funziona. Nella prima guida c'è il lavoro sui colpi e sulla partita, nella seconda le gambe per arrivare primo sulla palla anche al terzo set.</p>
       <div class="coppia">
         <img src="img/playbook-1.jpg" alt="Copertina del Playbook Tennis Power Formula">
         <img src="img/fisico-1.jpg" alt="Copertina della guida Fisico da Match">
       </div>
-      <h3>Tennis Power Formula · il Playbook in 6 settimane</h3>
-      <ul class="lista">
-        <li>Ogni settimana un obiettivo che puoi misurare</li>
-        <li>Una sessione da 60-75 minuti, oppure micro-sessioni da 10-15 minuti nei giorni pieni</li>
-        <li>Servizio e split-step, risposta, dritto, rovescio, gioco a punti, piano di partita sotto pressione</li>
-        <li>Tre livelli: Base, Pro ed Elite · 59 pagine</li>
-      </ul>
-      <h3>Fisico da Match · la preparazione fisica in campo</h3>
-      <ul class="lista">
-        <li>Test di partenza da rifare dopo 6 settimane</li>
-        <li>Split step, primo passo e interval training di 8 settimane</li>
-        <li>Prevenzione per gomito, spalla e caviglia</li>
-        <li>8 circuiti pronti con un campo, qualche cono e 30 minuti · 41 pagine</li>
-      </ul>
       <div class="offerta">
         <p class="voci">Playbook <b>47 €</b> + Fisico da Match <b>47 €</b>, comprati uno per uno</p>
         <p class="prezzi"><span class="barrato">94 €</span> <span class="finale">37 €</span> <span class="sconto">-61%</span></p>
         <p class="voci">Le due guide insieme, in PDF</p>
       </div>
-      <div class="cta"><a class="btn" data-compra href="#" target="_blank" rel="noopener">Voglio le 2 guide · 37 €</a><p class="nota">Pagamento sicuro con Stripe. Scarichi i due PDF subito dopo il pagamento.</p></div>
+      <div class="cta"><a class="btn" data-compra href="#" target="_blank" rel="noopener">Voglio le 2 guide · 37 €</a><p class="nota">Pagamento sicuro con Stripe. Scarichi i due PDF subito dopo il pagamento.</p><p class="fiducia">Garanzia 14 giorni «soddisfatto o rimborsato»: se le guide non fanno per te, mi scrivi entro 14 giorni e ti restituisco tutto. <a href="termini.html#garanzia">Come funziona</a></p></div>
+
+      <h3>Cosa cambia per te</h3>
+      <ul class="lista">
+        <li>Entri in campo sapendo cosa allenare quel giorno, invece di palleggiare e basta.</li>
+        <li>Vedi se stai migliorando: ogni settimana ha un obiettivo che puoi contare.</li>
+        <li>Ti alleni anche nei giorni pieni, con micro-sessioni da 10-15 minuti.</li>
+        <li>Arrivi prima sulla palla, anche al terzo set: split step, primo passo e 8 circuiti da 30 minuti.</li>
+        <li>Sai da dove parti: un test all'inizio, da rifare dopo 6 settimane per confrontare i numeri.</li>
+        <li>Lavori anche sulla prevenzione per gomito, spalla e caviglia.</li>
+      </ul>
+
+      <h3>Sono per te se…</h3>
+      <ul class="lista">
+        <li>giochi al circolo, fai qualche torneo o le sfide con gli amici;</li>
+        <li>ti alleni da anni ma gli stessi errori tornano sempre;</li>
+        <li>hai poco tempo e vuoi usarlo bene;</li>
+        <li>al terzo set ti mancano le gambe;</li>
+        <li>vuoi un piano da seguire da solo, al tuo ritmo.</li>
+      </ul>
+
+      <h3>Come si usano</h3>
+      <ol class="passi">
+        <li>Fai il test di partenza di Fisico da Match e scegli il tuo livello del Playbook: Base, Pro o Elite.</li>
+        <li>Ogni settimana segui la sessione da 60-75 minuti, oppure le micro-sessioni da 10-15 minuti, più un circuito da 30 minuti per le gambe. Le guide le tieni sul telefono in campo o le stampi.</li>
+        <li>Dopo 6 settimane rifai il test e confronta i numeri con quelli di partenza.</li>
+      </ol>
+      <div class="cta"><a class="btn" data-compra href="#" target="_blank" rel="noopener">Voglio le 2 guide · 37 €</a><p class="fiducia">Garanzia 14 giorni «soddisfatto o rimborsato»: se le guide non fanno per te, mi scrivi entro 14 giorni e ti restituisco tutto. <a href="termini.html#garanzia">Come funziona</a></p></div>
+
       <h2 style="margin-top:34px">Il corso di Bangkok da cui nasce il Playbook, <span class="giallo">raccontato da chi c'era.</span></h2>
       <figure class="testim">
         <video controls preload="none" playsinline poster="img/poster-allievo.jpg" src="video/recensione-allievo.mp4"></video>
@@ -75,6 +100,14 @@
         <figcaption><b>Allieva, livello intermedio</b> · in inglese<br>«Dopo sei-sette settimane con Coach Giovanni sono migliorata molto nei colpi da fondo, nel fisico e nel gioco: sono più costante. È davvero bravo.»</figcaption>
       </figure>
       <div class="cta"><a class="btn" data-compra href="#" target="_blank" rel="noopener">Voglio le 2 guide · 37 €</a></div>
+      <h2 style="margin-top:34px">Domande <span class="giallo">prima di comprare</span></h2>
+      <details><summary>Devo essere un giocatore forte?</summary><p>No. Le guide sono scritte per adulti che giocano al circolo, fanno qualche torneo o le sfide con gli amici. Il Playbook ha tre livelli: Base, Pro ed Elite.</p></details>
+      <details><summary>Ho poco tempo: ce la faccio?</summary><p>Sì. Nei giorni pieni ci sono le micro-sessioni da 10-15 minuti, e i circuiti di Fisico da Match durano circa 30 minuti.</p></details>
+      <details><summary>Ho una certa età: vanno bene lo stesso?</summary><p>Sono scritte per tennisti adulti, e Fisico da Match parte da un test che ti dice da dove cominciare. Prima di iniziare verifica con il medico la tua idoneità.</p></details>
+      <details><summary>Come ricevo le guide?</summary><p>Subito dopo il pagamento ti si apre la pagina con i link per scaricare i PDF. Se qualcosa non si apre, scrivimi e te li rimando.</p></details>
+      <details><summary>E se non fanno per me?</summary><p>Mi scrivi a <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> entro 14 giorni dall'acquisto e ti restituisco l'intero importo, senza dover spiegare il motivo. <a href="termini.html#garanzia">Le condizioni della garanzia</a>.</p></details>
+      <details><summary>E se un colpo continua a cedere?</summary><p>Le guide ti danno il metodo, ma non vedono il tuo colpo. Dopo l'acquisto puoi chiedermi l'analisi video: mi mandi il colpo e ti rispondo io con un video.</p></details>
+      <div class="cta"><a class="btn" data-compra href="#" target="_blank" rel="noopener">Voglio le 2 guide · 37 €</a><p class="fiducia">Garanzia 14 giorni «soddisfatto o rimborsato»: se le guide non fanno per te, mi scrivi entro 14 giorni e ti restituisco tutto. <a href="termini.html#garanzia">Come funziona</a></p></div>
       <p class="nota" style="margin-top:22px">Hai una domanda prima di comprare? Scrivimi su WhatsApp al <a href="https://wa.me/393517940376">351 794 0376</a>: ti rispondo io.</p>
     </div>
   </section>
