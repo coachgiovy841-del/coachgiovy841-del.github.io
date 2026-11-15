@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday · Le 2 guide di Coach Giovy a 27 €</title>
+<meta name="description" content="Black Friday dal 27 al 30 novembre: il Playbook Tennis Power Formula e Fisico da Match insieme a 27 €.">
+<meta property="og:title" content="Black Friday · Le 2 guide di Coach Giovy a 27 €">
+<meta property="og:image" content="https://coachgiovy841-del.github.io/img/playbook-1.jpg">
+<link rel="icon" href="../img/logo.png">
+<!-- Pagina Black Friday dal copione «Black Friday - Script pagina.md», approvata dal titolare il 15/11/2026 («Approvo la pagina»).
+     Tre fasi automatiche, uguali per tutti (ora italiana): attesa fino al 27/11 00:00, offerta aperta fino al 01/12 00:00, poi chiusa.
+     Link Stripe del pacchetto a 27 € DA CREARE: finche' manca, il pulsante porta a WhatsApp «BLACK». -->
+<style>
+:root{--navy:#050A30;--navy2:#0b1446;--navy3:#14205e;--giallo:#FFFF00;--bianco:#fff;--testo:#d9dcec;--grigio:#9aa0bd;--linea:rgba(255,255,255,.12);--blu:#2236d6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[hidden]{display:none!important}
+body{margin:0;background:var(--navy);color:var(--bianco);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{line-height:1.08;margin:0 0 .45em;font-weight:900;letter-spacing:-.015em}
+h2{font-size:clamp(28px,4.4vw,46px)}
+h3{font-size:clamp(19px,2.2vw,23px)}
+p{margin:0 0 1em;color:var(--testo)}
+.giallo{color:var(--giallo)}
+.centro{text-align:center}
+section{padding:64px 0}
+.alt{background:var(--navy2)}
+.eyebrow{display:block;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--giallo);margin-bottom:12px}
+.pillola{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--linea);background:rgba(255,255,255,.05);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.pillola::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--giallo);box-shadow:0 0 10px var(--giallo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--giallo);color:var(--navy);font-weight:900;font-size:19px;text-decoration:none;padding:18px 30px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(255,255,0,.25);text-align:center;font-family:inherit;line-height:1.2}
+.btn::after{content:"→";font-size:22px}
+.btn:hover{transform:translateY(-1px)}
+.fiducia{font-size:14px;color:var(--grigio);margin-top:12px}
+
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px;border-bottom:1px solid var(--linea)}
+.marchio{display:inline-flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
+.marchio img{width:34px;height:34px;border-radius:50%}
+.bf{background:#000;color:var(--giallo);font-weight:900;letter-spacing:.12em;font-size:13px;padding:7px 12px;border-radius:8px;border:1px solid var(--giallo)}
+
+.hero{position:relative;padding:44px 0 60px;background:radial-gradient(800px 500px at 85% 10%,#1a2a9a 0%,transparent 65%),var(--navy);overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.titolone{font-size:clamp(34px,5.6vw,60px);line-height:1.02;margin:16px 0 14px}
+.sotto{font-size:clamp(18px,2.2vw,22px);color:var(--bianco);font-weight:700;max-width:620px}
+.copertine{position:relative;height:440px;perspective:1100px}
+.copertine img{position:absolute;width:260px;border-radius:10px;box-shadow:-24px 30px 60px rgba(0,0,0,.55)}
+.copertine .c1{left:0;top:10px;transform:rotateY(18deg) rotateZ(-5deg)}
+.copertine .c2{right:0;top:60px;width:230px;transform:rotateY(-14deg) rotateZ(5deg)}
+.timbro{position:absolute;right:30%;top:-4px;width:104px;height:104px;border-radius:50%;background:var(--giallo);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:30px;line-height:1;transform:rotate(-10deg);z-index:2;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.timbro i{font-style:normal;font-size:11px;letter-spacing:.06em;margin-top:4px}
+
+.conto{margin:22px 0 0}
+.conto-titolo{margin:0 0 10px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--giallo)}
+.conto-cifre{display:flex;gap:10px}
+.conto-cifre span{min-width:74px;padding:12px 8px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(5,10,48,.45);display:flex;flex-direction:column;align-items:center}
+.conto-cifre b{font-size:34px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.conto-cifre small{margin-top:6px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--grigio)}
+
+.sintomi{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
+.sintomi li{background:var(--navy3);border-left:4px solid var(--giallo);border-radius:0 12px 12px 0;padding:14px 18px;color:var(--bianco);font-weight:700}
+
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.guida{border:1px solid var(--linea);border-radius:20px;padding:24px;background:rgba(255,255,255,.035)}
+.guida .immagini{display:flex;gap:10px;margin-bottom:18px}
+.guida .immagini img{width:calc(50% - 5px);border-radius:8px}
+.guida small{color:var(--giallo);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
+.guida ul{list-style:none;padding:0;margin:12px 0 0}
+.guida li{padding:7px 0 7px 28px;position:relative;font-size:16px;color:var(--bianco)}
+.guida li::before{content:"✓";position:absolute;left:4px;top:6px;color:var(--giallo);font-weight:900}
+
+.passi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;counter-reset:p}
+.passi div{background:var(--navy3);border-radius:16px;padding:20px}
+.passi div::before{counter-increment:p;content:counter(p);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--giallo);color:var(--navy);font-weight:900;margin-bottom:12px}
+.passi p{margin:0;color:var(--bianco)}
+
+.chi{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.chi img{border-radius:22px;border:3px solid var(--giallo)}
+
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.testim{margin:0;background:var(--navy3);border-radius:14px;overflow:hidden}
+.testim video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.testim figcaption{padding:14px;font-size:14px;color:var(--testo)}
+.testim b{color:var(--bianco)}
+.avvertenza{font-size:13px;color:var(--grigio);margin-top:16px}
+
+.offerta{max-width:620px;margin:28px auto 0;background:var(--bianco);color:var(--navy);border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.offerta .testa{background:linear-gradient(120deg,var(--blu),#3046ff);color:var(--bianco);padding:20px 24px}
+.offerta .testa small{color:var(--giallo);font-weight:800;letter-spacing:.12em;font-size:12px}
+.offerta .testa strong{display:block;font-size:30px;line-height:1.1;margin-top:4px}
+.offerta .corpo{padding:22px 24px 26px}
+.riga{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #e3e5f0;font-weight:700}
+.prezzo{display:flex;align-items:baseline;justify-content:center;gap:10px;margin:20px 0 6px}
+.prezzo b{font-size:64px;font-weight:900;line-height:1;color:var(--navy)}
+.prezzo span{font-weight:800;color:#555a80}
+.offerta .btn{width:100%;background:var(--navy);color:var(--giallo);box-shadow:none;margin-top:14px}
+.offerta .nota{font-size:13px;color:#555a80;margin:10px 0 0;text-align:center}
+
+.garanzia{display:flex;gap:20px;align-items:center;max-width:780px;margin:0 auto;border:2px dashed var(--giallo);border-radius:20px;padding:24px}
+.garanzia .sigillo{flex:none;width:96px;height:96px;border-radius:50%;background:var(--giallo);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:30px;line-height:1}
+.garanzia .sigillo i{font-style:normal;font-size:11px;letter-spacing:.06em;margin-top:2px}
+.garanzia p{margin:0}
+
+.va{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;border:1px solid var(--linea);border-radius:20px;padding:24px;background:rgba(255,255,255,.035)}
+.va .ico{font-size:44px}
+.va p{margin:0}
+
+.faq{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid var(--linea);padding:16px 0}
+summary{cursor:pointer;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--giallo);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0}
+
+footer{padding:30px 0 40px;font-size:13px;color:var(--grigio);border-top:1px solid var(--linea)}
+footer p{color:var(--grigio);margin:0 0 8px}
+footer a{color:var(--bianco)}
+
+.fisso{display:none}
+@media (max-width:860px){
+  section{padding:48px 0}
+  .hero .grid,.chi{grid-template-columns:1fr}
+  .copertine{height:360px;max-width:420px;margin:0 auto;width:100%}
+  .copertine img{width:210px}.copertine .c2{width:185px}
+  .guide{grid-template-columns:1fr}
+  .rec,.passi{grid-template-columns:1fr}
+  .va{grid-template-columns:1fr;text-align:center}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .top .bf{font-size:11px}
+  .conto-cifre span{min-width:0;flex:1}.conto-cifre b{font-size:28px}
+  .garanzia{flex-direction:column;text-align:center}
+  .fisso{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}
+  .fisso .btn{width:100%;padding:15px 20px;font-size:17px}
+  .fisso.nascosto{display:none}
+  footer{padding-bottom:96px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="marchio" href="../index.html"><img src="../img/logo.png" alt="">Coach Giovy</a>
+    <span class="bf">BLACK FRIDAY · 27–30 NOVEMBRE</span>
+  </div>
+</header>
+
+<main>
+<!-- 1. APERTURA -->
+<section class="hero" id="inizio">
+  <div class="wrap grid">
+    <div>
+      <span class="pillola" data-fase="attesa">Black Friday · apre il 27 novembre</span>
+      <span class="pillola" data-fase="aperta" hidden>Black Friday · fino al 30 novembre alle 24:00</span>
+      <span class="pillola" data-fase="chiusa" hidden>Il Black Friday è finito</span>
+      <h1 class="titolone">In allenamento giochi bene. <span class="giallo">In partita sparisci, e al terzo set ti mancano le gambe.</span></h1>
+      <p class="sotto" data-fase="attesa aperta">Il Playbook Tennis Power Formula e la guida Fisico da Match, insieme a 27 €. Tecnica e preparazione fisica da usare in campo, con il telefono in mano.</p>
+      <p class="sotto" data-fase="chiusa" hidden>Il Black Friday è finito. Le guide restano in vendita una per una a 47 €.</p>
+      <div data-fase="attesa">
+        <a class="btn" data-black href="#">Scrivimi BLACK su WhatsApp, ti avviso io</a>
+        <p class="fiducia">Il 27 novembre ti mando il link per prenderle a 27 €.</p>
+      </div>
+      <div data-fase="aperta" hidden>
+        <a class="btn" data-compra href="#">Voglio le 2 guide a 27 €</a>
+        <p class="fiducia">Pagamento sicuro con Stripe. Scarichi i PDF subito dopo il pagamento.</p>
+      </div>
+      <div data-fase="chiusa" hidden>
+        <a class="btn" href="../index.html#playbook">Vedi le guide</a>
+      </div>
+      <div class="conto" data-apre="2026-11-27T00:00:00+01:00" data-chiude="2026-12-01T00:00:00+01:00" data-fase="attesa aperta"></div>
+    </div>
+    <div class="copertine" aria-hidden="true">
+      <span class="timbro" data-fase="attesa aperta">27 €<i>LE DUE GUIDE</i></span>
+      <img class="c1" src="../img/playbook-1.jpg" alt="">
+      <img class="c2" src="../img/fisico-1.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- 2. IL PROBLEMA -->
+<section class="alt">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Ti riconosci?</span>
+    <h2>Il colpo che ti riusciva in allenamento <span class="giallo">in partita si spegne.</span></h2>
+    <ul class="sintomi">
+      <li>Il servizio che entrava si spegne sulla rete.</li>
+      <li>Arrivi leggermente tardi e stringi il braccio.</li>
+      <li>Dopo due errori giochi per non sbagliare.</li>
+      <li>Sul 30-40 il braccio frena e la palla esce corta.</li>
+      <li>Nel terzo set arrivi sulla palla con un passo di ritardo.</li>
+    </ul>
+    <p>Di solito la risposta è allenarsi di più o cambiare qualcosa nel gesto. Così correggi l’ultimo anello di una catena che è partita prima: appoggi, tempi, distanza dalla palla, energia rimasta. Io la chiamo ricerca del Blocco Madre: prima trovi da dove nasce l’errore, poi alleni il resto.</p>
+  </div>
+</section>
+
+<!-- 3. LA SOLUZIONE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">La soluzione</span>
+    <h2>Due guide: <span class="giallo">una per i colpi, una per le gambe.</span></h2>
+    <div class="guide">
+      <div class="guida">
+        <div class="immagini"><img src="../img/playbook-1.jpg" alt="Copertina del Playbook Tennis Power Formula" loading="lazy"><img src="../img/playbook-4.jpg" alt="Il percorso in 6 capitoli" loading="lazy"></div>
+        <small>Playbook · 59 pagine</small>
+        <h3>Tennis Power Formula: 6 settimane di tennis</h3>
+        <p>Il metodo del corso di Bangkok, in un PDF da usare in campo.</p>
+        <ul>
+          <li>Ogni settimana un obiettivo che puoi misurare</li>
+          <li>Una sessione da 60-75 minuti e micro-sessioni da 10-15 minuti per i giorni pieni</li>
+          <li>Servizio e split-step, risposta, dritto, rovescio, gioco a punti, piano di partita</li>
+          <li>Tre livelli: Base, Pro ed Elite</li>
+          <li>Un registro per vedere i progressi</li>
+        </ul>
+      </div>
+      <div class="guida">
+        <div class="immagini"><img src="../img/fisico-1.jpg" alt="Copertina della guida Fisico da Match" loading="lazy"><img src="../img/fisico-9.jpg" alt="Il test di partenza da rifare dopo 6 settimane" loading="lazy"></div>
+        <small>Fisico da Match · 41 pagine</small>
+        <h3>Le gambe per il terzo set</h3>
+        <p>Per arrivare primo sulla palla anche nel terzo set, con un campo, qualche cono e 30 minuti.</p>
+        <ul>
+          <li>Test di partenza da rifare dopo 6 settimane</li>
+          <li>Split step, primo passo e interval training di 8 settimane</li>
+          <li>Prevenzione per gomito, spalla e caviglia</li>
+          <li>8 circuiti pronti, compreso quello prima della partita</li>
+          <li>Ogni capitolo mostra con un grafico come si arriva al risultato</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COME SI USA -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Come si usa</span>
+    <h2>Tre passi, <span class="giallo">da questa settimana.</span></h2>
+    <div class="passi">
+      <div><p>Paghi con carta, Apple Pay o Link e scarichi subito i due PDF.</p></div>
+      <div><p>Fai il test di partenza e scegli il tuo livello.</p></div>
+      <div><p>Questa settimana lavori su un obiettivo solo, e a fine settimana conti il risultato.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CHI SONO -->
+<section>
+  <div class="wrap chi">
+    <img src="../img/coach-vsl-ritratto.jpg" alt="Coach Giovy, Giovanni Leto" loading="lazy">
+    <div>
+      <span class="eyebrow">Chi sono</span>
+      <h2>Giovanni Leto, <span class="giallo">Coach Giovy.</span></h2>
+      <p>Sono Istruttore di 1° grado FITP (Federazione Italiana Tennis e Padel) e alleno da 25 anni, in Italia e nel Sud-est asiatico, dai principianti ai giocatori di alto livello.</p>
+      <p>Ho iniziato a dieci anni. Gli infortuni hanno chiuso il sogno di diventare professionista, e ci ho messo tempo a capire che potevo essere utile anche fuori dal campo. Allenando gli adulti ho visto persone motivate, innamorate del tennis, che si allenavano sul problema sbagliato. Queste guide nascono da lì.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. RECENSIONI -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Cosa dicono gli allievi</span>
+    <h2>Il corso di Bangkok da cui nasce il Playbook, <span class="giallo">raccontato da chi c’era.</span></h2>
+    <div class="rec">
+      <figure class="testim"><video controls preload="none" playsinline poster="../img/poster-allievo.jpg" src="../video/recensione-allievo.mp4"></video><figcaption><b>Allievo del corso</b> · in inglese<br>«Prima di Tennis Power Formula ero incostante e non avevo un vero piano di allenamento. Dopo circa sei settimane sono diventato molto più costante e anche più forte mentalmente in campo.»</figcaption></figure>
+      <figure class="testim"><video controls preload="none" playsinline poster="../img/poster-fon-thailandia.jpg" src="../video/recensione-fon-thailandia.mp4"></video><figcaption><b>Fon, Thailandia</b> · in thailandese<br>«Le tecniche e il modo di pensare il gioco che ho imparato hanno cambiato completamente il mio tennis rispetto a quello che avevo studiato prima.»</figcaption></figure>
+      <figure class="testim"><video controls preload="none" playsinline poster="../img/poster-inglese.jpg" src="../video/recensione-inglese.mp4"></video><figcaption><b>Allieva, livello intermedio</b> · in inglese<br>«Dopo sei-sette settimane con Coach Giovanni sono migliorata molto nei colpi da fondo, nel fisico e nel gioco: sono più costante.»</figcaption></figure>
+    </div>
+    <p class="avvertenza">Le recensioni riguardano il corso dal vivo Tennis Power Formula di Bangkok (ottobre 2025), pubblicate con il consenso degli allievi. I risultati dipendono da livello di partenza, tempo dedicato e impegno. Non ti prometto la classifica e non ti prometto di vincere di più: ti prometto che saprai su cosa stai lavorando e perché.</p>
+  </div>
+</section>
+
+<!-- 7. L'OFFERTA -->
+<section id="offerta">
+  <div class="wrap">
+    <div class="centro">
+      <span class="eyebrow">L’offerta</span>
+      <h2 data-fase="attesa aperta">Due guide, 27 €. <span class="giallo">Dal 27 al 30 novembre.</span></h2>
+      <h2 data-fase="chiusa" hidden>Il Black Friday <span class="giallo">è finito.</span></h2>
+    </div>
+    <div class="offerta">
+      <div class="testa"><small>BLACK FRIDAY · 27–30 NOVEMBRE</small><strong>Playbook + Fisico da Match</strong></div>
+      <div class="corpo">
+        <div class="riga"><span>Playbook Tennis Power Formula · 59 pagine</span><span>✓</span></div>
+        <div class="riga"><span>Fisico da Match · 41 pagine</span><span>✓</span></div>
+        <div class="riga"><span>Garanzia 14 giorni «soddisfatto o rimborsato»</span><span>✓</span></div>
+        <div data-fase="attesa aperta"><div class="prezzo"><b>27 €</b><span>per tutte e due</span></div>
+        <p class="nota">Ogni guida, comprata da sola, costa 47 €.</p></div>
+        <div data-fase="attesa"><a class="btn" data-black href="#">Scrivimi BLACK, ti avviso io</a><p class="nota">L’acquisto apre venerdì 27 novembre.</p></div>
+        <div data-fase="aperta" hidden><a class="btn" data-compra href="#">Voglio le 2 guide a 27 €</a><p class="nota">Pagamento sicuro con Stripe. Scarichi i PDF subito.</p></div>
+        <div data-fase="chiusa" hidden><p class="nota" style="font-size:16px;font-weight:700">Il Black Friday è finito. Le guide restano in vendita una per una a 47 €.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. GARANZIA -->
+<section class="alt">
+  <div class="wrap">
+    <div class="garanzia">
+      <div class="sigillo">14<i>GIORNI</i></div>
+      <div><h3>14 giorni per provarle</h3><p>Usale per 14 giorni. Se non fanno per te, scrivimi a <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> entro 14 giorni dall’acquisto e ti restituisco i 27 €. Basta un messaggio. <a href="../termini.html#garanzia">Le condizioni della garanzia</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. VIDEOANALISI GRATUITA (DECISIONE del titolare 15/11/2026: resta anche nel Black Friday) -->
+<section>
+  <div class="wrap">
+    <div class="va">
+      <span class="ico">🎥</span>
+      <div><h3>E la videoanalisi gratuita resta, <span class="giallo">anche nel Black Friday.</span></h3><p>Mandami su WhatsApp 20-30 secondi del colpo che ti fa perdere più punti: ti rispondo io con un vocale. Massimo 3 al giorno, in ordine di arrivo.</p></div>
+      <a class="btn" href="https://wa.me/393517940376?text=VIDEOANALISI%20-%20Ciao%20Coach%2C%20ti%20mando%2020-30%20secondi%20del%20mio%20colpo%3A%20" target="_blank" rel="noopener">Mandami il tuo colpo</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10. DOMANDE -->
+<section class="alt">
+  <div class="faq"><div class="wrap">
+    <span class="eyebrow">Domande frequenti</span>
+    <h2>Prima di prenderle</h2>
+    <details><summary>A che livello servono?</summary><p>Il Playbook ha tre livelli, Base, Pro ed Elite. Fisico da Match parte da un test che ti dice da dove cominciare.</p></details>
+    <details><summary>Quanto tempo mi serve?</summary><p>Una sessione da 60-75 minuti oppure micro-sessioni da 10-15 minuti per il Playbook. Circa 30 minuti per i circuiti di Fisico da Match.</p></details>
+    <details><summary>Mi serve la palestra?</summary><p>Bastano un campo e qualche cono.</p></details>
+    <details><summary>Ho più di 50 anni, va bene lo stesso?</summary><p>Le guide sono scritte per tennisti adulti. Prima di iniziare verifica la tua idoneità sportiva con il medico e fermati in caso di dolore.</p></details>
+    <details><summary>Come ricevo le guide?</summary><p>Subito dopo il pagamento la pagina di conferma ti mostra i link per scaricare i PDF. Se qualcosa non si apre, scrivimi e te li rimando.</p></details>
+    <details><summary>Devo fare una videochiamata?</summary><p>No. Compri e parti da solo. Se vuoi scrivermi, sono su WhatsApp al 351 794 0376.</p></details>
+  </div></div>
+</section>
+
+<!-- 11. CHIUSURA -->
+<section>
+  <div class="wrap centro">
+    <h2>Sabato prossimo entri in campo <span class="giallo">sapendo su cosa lavori.</span></h2>
+    <p data-fase="attesa aperta" style="font-size:20px;color:var(--bianco);font-weight:700">Due guide, 100 pagine, 27 €, dal 27 al 30 novembre.</p>
+    <div data-fase="attesa"><a class="btn" data-black href="#">Scrivimi BLACK su WhatsApp</a></div>
+    <div data-fase="aperta" hidden><a class="btn" data-compra href="#">Voglio le 2 guide a 27 €</a></div>
+    <div data-fase="chiusa" hidden><a class="btn" href="../index.html#playbook">Vedi le guide</a></div>
+    <p class="fiducia" style="margin-top:22px">«Ci vediamo in campo.» <span class="giallo">Coach Giovy</span></p>
+  </div>
+</section>
+</main>
+
+<div class="fisso" id="fisso">
+  <a class="btn" data-fase="attesa" data-black href="#">Scrivimi BLACK</a>
+  <a class="btn" data-fase="aperta" data-compra href="#" hidden>Le 2 guide a 27 €</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Contenuto digitale: scaricandolo subito rinunci al recesso legale di 14 giorni (art. 59 Codice del consumo); resta la garanzia volontaria di 14 giorni descritta sopra. Le indicazioni non sostituiscono il parere del medico e non garantiscono un risultato. Vedi le <a href="../termini.html#black-friday">condizioni del Black Friday</a> e le <a href="../termini.html#pacchetto">condizioni di vendita</a>.</p>
+    <p>Questa pagina non fa parte di Meta, Google, TikTok o X e non è sponsorizzata né approvata da loro.</p>
+    <p>© 2026 Giovanni Leto · Coach Giovy · <a href="mailto:coachgiovy841@gmail.com">coachgiovy841@gmail.com</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../privacy.html#cookie">Cookie Policy</a> · <a href="../termini.html">Termini e Condizioni</a> · <a href="#" data-cookie>Preferenze cookie</a></p>
+  </div>
+</footer>
+
+<script>
+// Link Stripe del pacchetto Black Friday 27 € (Playbook + Fisico da Match): DA CREARE e provare a 0 € prima del 27/11.
+var PACCHETTO_BF = '';
+var BLACK = 'https://wa.me/393517940376?text=' + encodeURIComponent('BLACK - Avvisami quando apre il Black Friday delle 2 guide a 27 €');
+// ?fase=attesa|aperta|chiusa solo per le prove.
+var forzata = new URLSearchParams(location.search).get('fase');
+
+document.querySelectorAll('[data-black]').forEach(function (a) { a.href = BLACK; a.target = '_blank'; a.rel = 'noopener'; });
+document.querySelectorAll('[data-compra]').forEach(function (a) {
+  if (PACCHETTO_BF) { a.href = PACCHETTO_BF; a.target = '_blank'; a.rel = 'noopener'; }
+  else { a.href = BLACK; a.target = '_blank'; a.rel = 'noopener'; }
+});
+
+// Conto alla rovescia e fasi: scadenza vera e uguale per tutti (art. 23 lett. g Codice del consumo).
+var box = document.querySelector('.conto');
+var apre = Date.parse(box.dataset.apre), chiude = Date.parse(box.dataset.chiude);
+box.innerHTML = '<p class="conto-titolo"></p><div class="conto-cifre">' +
+  ['giorni', 'ore', 'min', 'sec'].map(function (e) { return '<span><b>00</b><small>' + e + '</small></span>'; }).join('') + '</div>';
+var titolo = box.querySelector('.conto-titolo'), cifre = box.querySelectorAll('b'), ultima = null, timer;
+function due(n) { return (n < 10 ? '0' : '') + n; }
+function mostraFase(f) {
+  if (f === ultima) return; ultima = f;
+  document.querySelectorAll('[data-fase]').forEach(function (x) { x.hidden = x.dataset.fase.split(' ').indexOf(f) < 0; });
+}
+function giro() {
+  var ora = Date.now();
+  var f = forzata || (ora < apre ? 'attesa' : ora < chiude ? 'aperta' : 'chiusa');
+  mostraFase(f);
+  if (f === 'chiusa') { clearInterval(timer); return; }
+  var meta = f === 'attesa' ? apre : chiude;
+  titolo.textContent = f === 'attesa' ? 'Il Black Friday apre tra' : 'L’offerta finisce tra';
+  var r = Math.max(0, Math.floor((meta - ora) / 1000));
+  [Math.floor(r / 86400), Math.floor(r % 86400 / 3600), Math.floor(r % 3600 / 60), r % 60].forEach(function (v, i) { cifre[i].textContent = due(v); });
+}
+giro(); timer = setInterval(giro, 1000);
+
+// Pulsante fisso su telefono: nascosto quando l'apertura o l'offerta sono a vista.
+var fisso = document.getElementById('fisso');
+if ('IntersectionObserver' in window) {
+  var visibili = new Set();
+  var oss = new IntersectionObserver(function (voci) {
+    voci.forEach(function (v) { if (v.isIntersecting) visibili.add(v.target); else visibili.delete(v.target); });
+    fisso.classList.toggle('nascosto', visibili.size > 0 || ultima === 'chiusa');
+  });
+  ['inizio', 'offerta'].forEach(function (id) { oss.observe(document.getElementById(id)); });
+}
+</script>
+<script src="../consenso.js"></script>
+</body>
+</html>
