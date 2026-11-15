@@ -152,6 +152,21 @@ var SOGLIA = Number(q.get('cta')) || 600;
 if (/^video\/[\w-]+\.mp4$/.test(q.get('vsl') || '')) VSL = q.get('vsl');
 var parti = Array.isArray(VSL) ? VSL : (VSL ? [VSL] : []);
 
+// Black Friday 2026 (DECISIONE del titolare 15/11/2026, «Approvo tutto»): dal 27/11 00:00 al 01/12 00:00, ora italiana,
+// stesso prezzo della pagina /blackfriday: link Stripe a 27 € e prezzo senza barrato. Poi torna da solo a 37 €.
+// ?bf=1 solo per le prove.
+var BF = {apre: Date.parse('2026-11-27T00:00:00+01:00'), chiude: Date.parse('2026-12-01T00:00:00+01:00'),
+  link: 'https://buy.stripe.com/dRmcN65EV9BcfspbNy9bO08'};
+if ((Date.now() >= BF.apre && Date.now() < BF.chiude) || q.get('bf') === '1') {
+  PACCHETTO = BF.link;
+  document.querySelectorAll('.offerta .prezzi').forEach(function (p) {
+    p.innerHTML = '<span class="finale">27 €</span> <span class="sconto">Black Friday</span>';
+  });
+  document.querySelectorAll('.offerta .voci').forEach(function (v, i) {
+    v.textContent = i === 0 ? 'Black Friday: le due guide insieme, fino al 30 novembre alle 24:00' : 'Da sole costano 47 € l’una';
+  });
+  document.querySelectorAll('[data-compra]').forEach(function (b) { b.textContent = b.textContent.replace('37 €', '27 €'); });
+}
 document.querySelectorAll('[data-compra]').forEach(function (a) { a.href = PACCHETTO; });
 var dopo = document.getElementById('dopo');
 function sblocca() { dopo.classList.add('visibile'); }
