@@ -3,44 +3,718 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Video gratuito: perché il tuo tennis si blocca</title>
-<meta name="description" content="Presentazione gratuita di Coach Giovy per tennisti adulti di circolo: il Blocco Madre e il Metodo C.A.M.P.O.">
+<title>#BloccoMadre · Video gratuito di Coach Giovy per tennisti adulti</title>
+<meta name="description" content="Video gratuito di Coach Giovy per tennisti adulti di circolo: perché il tuo tennis si blocca nei momenti che contano, il Blocco Madre e il Metodo C.A.M.P.O.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="Video gratuito: perché il tuo tennis si blocca">
+<meta property="og:title" content="#BloccoMadre · Video gratuito di Coach Giovy">
 <meta property="og:image" content="https://coachgiovy841-del.github.io/img/coach.jpg">
 <link rel="icon" href="img/logo.png">
-<link rel="stylesheet" href="funnel.css">
+<!-- Pagina d'iscrizione sul modello «Onnipresente» di Mick Cosentino; approvata dal titolare il 15/11/2026 («Approvo la pagina»). -->
+<style>
+:root{--navy:#050A30;--navy2:#0b1446;--navy3:#14205e;--giallo:#FFFF00;--bianco:#fff;--testo:#d9dcec;--grigio:#9aa0bd;--linea:rgba(255,255,255,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--bianco);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{line-height:1.08;margin:0 0 .45em;font-weight:900;letter-spacing:-.015em}
+h2{font-size:clamp(28px,4.4vw,46px)}
+h3{font-size:clamp(19px,2.2vw,23px)}
+p{margin:0 0 1em;color:var(--testo)}
+.giallo{color:var(--giallo)}
+.maiu{text-transform:uppercase}
+.pillola{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--linea);background:rgba(255,255,255,.05);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.pillola::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--giallo);box-shadow:0 0 10px var(--giallo)}
+.eyebrow{display:block;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--giallo);margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--giallo);color:var(--navy);font-weight:900;font-size:19px;text-decoration:none;padding:18px 30px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 10px 30px rgba(255,255,0,.25);text-align:center;font-family:inherit;line-height:1.2}
+.btn::after{content:"→";font-size:22px}
+.btn:hover{transform:translateY(-1px)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.btn[disabled]::after{content:""}
+.centro{text-align:center}
+section{padding:64px 0}
+.alt{background:var(--navy2)}
+
+/* testata */
+.top{position:relative;z-index:2}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;padding-bottom:16px;border-bottom:1px solid var(--linea)}
+.marchio{display:inline-flex;align-items:center;gap:6px;background:var(--bianco);color:var(--navy);font-weight:900;font-size:18px;letter-spacing:.02em;padding:5px 12px;border-radius:9px;text-decoration:none}
+.marchio b{color:#2236d6}
+.top .pillola{font-size:12px;letter-spacing:.04em;text-transform:none}
+
+/* apertura */
+.hero{position:relative;padding:40px 0 56px;background:radial-gradient(800px 500px at 80% 10%,#1a2a9a 0%,transparent 65%),var(--navy);overflow:hidden}
+.hero .ritratto{position:absolute;right:max(0px,calc((100vw - 1080px)/2 - 20px));top:60px;width:min(500px,46vw);height:700px;background:url(img/coach-scontornato.png) 50% 0/contain no-repeat;mix-blend-mode:luminosity;opacity:.95;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 95%);mask-image:linear-gradient(180deg,#000 55%,transparent 95%)}
+.hero::after{content:"";position:absolute;right:max(-60px,calc((100vw - 1080px)/2 - 80px));top:40px;width:min(560px,52vw);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero .bolla{position:absolute;right:20px;top:24px;background:var(--giallo);color:var(--navy);font-weight:800;font-size:14px;padding:8px 14px;border-radius:12px;transform:rotate(-3deg);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.titolone{font-size:clamp(56px,11vw,118px);line-height:.9;letter-spacing:-.03em;text-transform:uppercase;margin:18px 0 14px}
+.titolone .hash{color:var(--giallo)}
+.sotto{font-size:clamp(20px,2.6vw,27px);font-weight:800;color:var(--bianco);max-width:640px;margin-bottom:28px}
+
+/* pass con modulo */
+.pass{max-width:760px;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.pass-testa{background:linear-gradient(120deg,#2236d6,#3046ff);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:relative}
+.pass-testa small{display:flex;align-items:center;gap:8px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--giallo)}
+.pass-testa small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--giallo)}
+.pass-testa strong{display:block;font-size:clamp(26px,4vw,38px);font-weight:900;line-height:1.1;margin-top:4px}
+.pass-testa span{font-size:15px;color:#e3e7ff}
+.dati{display:flex;gap:8px}
+.dati div{background:rgba(5,10,48,.35);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 12px;text-align:center;min-width:64px}
+.dati b{display:block;color:var(--giallo);font-size:22px;line-height:1.1}
+.dati i{font-style:normal;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#dfe3ff}
+.strappo{height:0;border-top:2px dashed #c9cce0;position:relative;background:var(--bianco)}
+.strappo::before,.strappo::after{content:"";position:absolute;top:-11px;width:20px;height:20px;border-radius:50%;background:var(--navy)}
+.strappo::before{left:-10px}.strappo::after{right:-10px}
+.modulo{background:var(--bianco);color:var(--navy);padding:22px 24px 24px}
+.modulo h3{color:var(--navy);font-size:24px;text-transform:uppercase;margin-bottom:12px}
+.campi{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+.campi .tutta{grid-column:1/-1}
+.modulo label{display:block;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin:10px 0 4px;color:#2a2f5a}
+.modulo input[type=text],.modulo input[type=email],.modulo input[type=tel]{width:100%;font-size:17px;padding:13px 12px;border:2px solid #c9cce0;border-radius:10px;font-family:inherit;color:var(--navy);background:#f6f7fc}
+.modulo input:focus{outline:none;border-color:#2236d6;background:#fff}
+.modulo .aiuto{font-size:13px;color:#555a80;margin-top:4px}
+.modulo .scelta{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;margin:12px 0 0;color:#1d2250;font-weight:400;letter-spacing:0;text-transform:none}
+.modulo .scelta input{margin-top:2px;width:20px;height:20px;flex:none}
+.modulo .btn{width:100%;margin-top:16px;background:var(--navy);color:var(--giallo);box-shadow:none;flex-direction:column;gap:2px}
+.modulo .btn::after{content:none}
+.modulo .btn small{font-size:12px;letter-spacing:.1em;font-weight:800;color:#fff;opacity:.85}
+.modulo .errore{color:#b00020;font-size:14px;font-weight:700;margin-top:10px;min-height:1em}
+.trappola{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+.regalino{font-size:15px;color:var(--testo);margin:16px 0 0}
+.regalino b{color:var(--giallo)}
+
+/* tre segreti in breve */
+.chip3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;max-width:760px}
+.chip3 div{border:1px solid var(--linea);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.04)}
+.chip3 small{display:block;color:var(--giallo);font-weight:800;font-size:11px;letter-spacing:.14em}
+.chip3 b{font-size:16px;line-height:1.25;display:block;margin-top:4px}
+
+/* video manifesto */
+.perche{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.perche h2{text-transform:uppercase}
+.schermo{position:relative;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,0,.6);background:#000;aspect-ratio:16/9}
+.schermo video{width:100%;height:100%;object-fit:cover}
+
+/* regalo */
+.regalo{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.regalo .etichetta{display:inline-block;background:var(--giallo);color:var(--navy);font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:6px;margin-bottom:14px}
+.regalo h2 .bianco{color:var(--bianco)}
+.numeri{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--linea);padding-top:18px;margin-top:8px}
+.numeri b{font-size:34px;font-weight:900;display:block;line-height:1}
+.numeri span{font-size:13px;color:var(--grigio)}
+.libro{position:relative;aspect-ratio:3/4;max-width:340px;margin:0 auto;border-radius:10px;background:linear-gradient(160deg,#16247a,#050A30 70%);border:1px solid rgba(255,255,255,.2);box-shadow:20px 24px 0 -6px #0f1a5c,40px 44px 0 -14px #0a1350,0 30px 60px rgba(0,0,0,.5);padding:30px 26px;display:flex;flex-direction:column}
+.libro img{width:54px;height:54px;border-radius:50%;margin-bottom:auto}
+.libro small{color:var(--giallo);font-weight:800;font-size:11px;letter-spacing:.14em}
+.libro strong{font-size:36px;line-height:1;text-transform:uppercase;margin:8px 0 12px}
+.libro span{font-size:14px;color:var(--testo)}
+.timbro{position:absolute;right:-14px;top:-14px;width:92px;height:92px;border-radius:50%;background:var(--giallo);color:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:17px;line-height:1;transform:rotate(12deg)}
+.timbro i{font-style:normal;font-size:9px;letter-spacing:.06em;margin-top:3px}
+.scorri{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.carta{border:1px solid var(--linea);background:rgba(255,255,255,.04);border-radius:16px;padding:20px}
+.carta .num{font-size:38px;font-weight:900;color:var(--giallo);line-height:1;margin-bottom:10px}
+.carta h3{font-size:18px}
+.carta p{font-size:15px;margin:0}
+
+/* videoanalisi gratuita */
+.va-testa{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.va-testa h2{text-transform:uppercase}
+.bollino{display:inline-flex;align-items:center;gap:8px;background:var(--giallo);color:var(--navy);font-weight:900;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:8px;margin-bottom:14px}
+.limite{display:inline-block;margin-top:6px;border:1px dashed var(--giallo);color:var(--giallo);font-weight:800;font-size:14px;padding:8px 12px;border-radius:10px}
+.passi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px;counter-reset:passo}
+.passi div{position:relative;background:var(--navy3);border-radius:16px;padding:20px;border:1px solid var(--linea)}
+.passi div::before{counter-increment:passo;content:counter(passo);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--giallo);color:var(--navy);font-weight:900;font-size:19px;margin-bottom:12px}
+.passi b{display:block;font-size:17px;line-height:1.3;margin-bottom:6px}
+.passi p{margin:0;font-size:15px}
+.telefono{max-width:330px;margin:0 auto;background:#0b141a;border-radius:34px;padding:14px;border:6px solid #1d2733;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(3deg)}
+.telefono .barra{display:flex;align-items:center;gap:10px;background:#1f2c34;border-radius:18px 18px 0 0;padding:10px 12px;font-weight:800;font-size:15px}
+.telefono .barra img{width:32px;height:32px;border-radius:50%}
+.telefono .barra small{display:block;font-weight:400;font-size:12px;color:#8696a0}
+.chat{background:#0b141a;padding:12px 6px;display:grid;gap:8px}
+.msg{max-width:84%;padding:8px 11px;border-radius:12px;font-size:14px;line-height:1.35;color:#e9edef}
+.msg.lui{background:#202c33;justify-self:start;border-top-left-radius:3px}
+.msg.io{background:#005c4b;justify-self:end;border-top-right-radius:3px}
+.msg.video{display:flex;align-items:center;gap:8px}
+.msg.video i{font-style:normal;width:46px;height:34px;border-radius:6px;background:#3b4a54;display:flex;align-items:center;justify-content:center}
+.vocale{display:flex;align-items:center;gap:8px}
+.vocale i{font-style:normal;width:28px;height:28px;border-radius:50%;background:#e9edef;color:#005c4b;display:flex;align-items:center;justify-content:center;font-size:12px}
+.vocale span{flex:1;height:18px;background:repeating-linear-gradient(90deg,#8fd9c7 0 2px,transparent 2px 5px);border-radius:3px;min-width:110px}
+.ora{display:block;text-align:right;font-size:10px;color:#8696a0;margin-top:2px}
+.filma{margin-top:30px;border:1px solid var(--linea);border-radius:18px;padding:22px 24px;background:rgba(255,255,255,.035)}
+.filma h3{text-transform:uppercase;font-size:17px;letter-spacing:.08em;color:var(--giallo)}
+.filma ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.filma li{font-size:15px;color:var(--bianco)}
+.filma li b{display:block;font-size:26px;margin-bottom:4px}
+.esempio{font-size:12px;color:var(--grigio);text-align:center;margin-top:16px}
+@media (max-width:860px){.va-testa{grid-template-columns:1fr}.passi,.filma ul{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.passi,.filma ul{grid-template-columns:1fr}.telefono{transform:none}}
+
+/* tu sei */
+.tusei{display:inline-flex;background:rgba(255,255,255,.07);border-radius:999px;padding:5px;gap:4px;margin:8px 0 22px}
+.tusei button{border:0;background:none;color:var(--bianco);font:inherit;font-weight:800;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer}
+.tusei button[aria-pressed=true]{background:var(--giallo);color:var(--navy)}
+.risposta[hidden]{display:none}
+.risposta p{font-size:19px;color:var(--bianco)}
+.obiezione{border-left:4px solid var(--giallo);padding:6px 0 6px 16px;font-style:italic}
+.qui{font-weight:900;letter-spacing:.1em;color:var(--giallo)}
+
+/* prova */
+.prova-testa{max-width:780px}
+.prova-testa h2{text-transform:uppercase}
+.rec{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.testim{margin:0;background:var(--navy3);border-radius:14px;overflow:hidden}
+.testim video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.testim figcaption{padding:14px;font-size:14px;color:var(--testo)}
+.testim b{color:var(--bianco)}
+.avvertenza{font-size:13px;color:var(--grigio);margin-top:18px}
+.cifre{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.cifre div{background:var(--bianco);color:var(--navy);border-radius:16px;padding:20px}
+.cifre b{display:block;font-size:clamp(34px,5vw,50px);font-weight:900;line-height:1;color:#2236d6}
+.cifre span{font-size:14px;font-weight:700}
+
+/* segreti */
+.segreti{display:grid;gap:16px;margin-top:30px}
+.segreto{display:grid;grid-template-columns:90px 1fr .9fr;gap:24px;align-items:center;border:1px solid var(--linea);border-radius:20px;padding:26px;background:rgba(255,255,255,.035)}
+.segreto .n{font-size:64px;font-weight:900;color:var(--giallo);line-height:1}
+.segreto h3{text-transform:uppercase}
+.segreto p{margin:0}
+.fumetti{display:grid;gap:8px}
+.fumetto{background:var(--bianco);color:var(--navy);border-radius:14px 14px 14px 4px;padding:10px 14px;font-size:15px;font-weight:700}
+.fumetto.giallo{background:var(--giallo);border-radius:14px 14px 4px 14px;justify-self:end;color:var(--navy)}
+.campo5{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.campo5 div{background:var(--navy3);border-radius:10px;padding:8px 4px;text-align:center}
+.campo5 b{display:block;font-size:26px;color:var(--giallo);line-height:1}
+.campo5 span{font-size:11px;color:var(--testo)}
+
+/* porti a casa */
+.casa{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.casa div{border-top:3px solid var(--giallo);background:rgba(255,255,255,.04);border-radius:0 0 14px 14px;padding:18px}
+.casa small{color:var(--giallo);font-weight:900;letter-spacing:.1em}
+.casa b{display:block;margin-top:6px;font-size:17px;line-height:1.3}
+
+/* chi */
+.chi{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+.chi .foto{border-radius:22px;overflow:hidden;border:3px solid var(--giallo);aspect-ratio:4/5}
+.chi .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.chi h2{text-transform:uppercase;font-size:clamp(40px,6vw,64px);line-height:.95}
+.frase{font-size:21px;font-weight:800;color:var(--giallo)}
+
+/* per te */
+.perte{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.perte div{border-radius:18px;padding:24px}
+.si{background:var(--bianco);color:var(--navy)}
+.no{border:1px solid var(--linea)}
+.perte h3{text-transform:uppercase;font-size:17px;letter-spacing:.08em}
+.si h3{color:#2236d6}
+.perte ul{list-style:none;margin:0;padding:0}
+.perte li{padding:9px 0 9px 32px;position:relative;font-size:17px}
+.si li{color:var(--navy);border-bottom:1px solid #e3e5f0}
+.no li{color:var(--testo);border-bottom:1px solid var(--linea)}
+.perte li:last-child{border-bottom:0}
+.si li::before{content:"✓";position:absolute;left:4px;top:8px;font-weight:900;color:#2236d6}
+.no li::before{content:"✕";position:absolute;left:4px;top:8px;font-weight:900;color:var(--grigio)}
+
+/* scaletta */
+.scaletta{list-style:none;padding:0;margin:28px 0 0;border-left:2px solid var(--linea)}
+.scaletta li{position:relative;padding:0 0 26px 26px}
+.scaletta li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid var(--giallo)}
+.scaletta small{color:var(--giallo);font-weight:900;letter-spacing:.12em}
+.scaletta b{display:block;font-size:20px;text-transform:uppercase;margin:2px 0 4px}
+.scaletta p{margin:0;font-size:16px}
+
+/* appuntamento Black Friday con scena 3D (modello «26.11» di Mick) */
+[hidden]{display:none!important}
+.appunt{padding:24px 0 64px}
+.appunt .riquadro{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(600px 420px at 85% 20%,#3046ff 0%,transparent 70%),linear-gradient(160deg,#0f1c78,#050A30 75%);padding:48px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}
+.appunt .riquadro::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.appunt .testi{position:relative;z-index:2}
+.data-grande{font-size:clamp(84px,15vw,170px);font-weight:900;line-height:.85;letter-spacing:-.05em;margin:6px 0 14px}
+.appunt h2{text-transform:uppercase}
+.righe{border-top:1px solid var(--linea);margin:22px 0}
+.righe>div{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--linea)}
+.righe i{width:34px;height:34px;border-radius:9px;background:var(--bianco);color:var(--navy);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900}
+.righe b{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:14px;margin-bottom:2px}
+.righe p{margin:0;font-size:16px}
+.bf-frase{font-size:20px;font-weight:800;color:var(--bianco)}
+.conto{margin:18px 0 0}
+.conto-titolo{margin:0 0 10px;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--giallo)}
+.conto-cifre{display:flex;gap:10px}
+.conto-cifre span{min-width:74px;padding:12px 8px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(5,10,48,.45);display:flex;flex-direction:column;align-items:center}
+.conto-cifre b{font-size:34px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.conto-cifre small{margin-top:6px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--grigio)}
+.scena{position:relative;height:520px;perspective:1100px;z-index:1;width:100%;max-width:460px;margin:0 auto}
+.scena .persona{position:absolute;right:-10px;bottom:-48px;width:400px;height:560px;background:url(img/coach-scontornato.png) 50% 0/contain no-repeat;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 98%);mask-image:linear-gradient(180deg,#000 70%,transparent 98%)}
+.carta3d{position:absolute;left:0;bottom:70px;width:300px;padding:22px;border-radius:20px;background:linear-gradient(145deg,#ffffff,#e6e9ff);color:var(--navy);transform:rotateY(22deg) rotateX(10deg) rotateZ(-6deg);transform-style:preserve-3d;box-shadow:-30px 40px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.6) inset;transition:transform .25s ease-out;will-change:transform}
+.carta3d::after{content:"";position:absolute;inset:0;border-radius:20px;background:linear-gradient(115deg,rgba(255,255,255,.9) 0%,transparent 30%);opacity:.5;pointer-events:none}
+.carta3d .tacca{position:absolute;top:50%;width:22px;height:22px;border-radius:50%;background:#0b1446;transform:translateY(-50%)}
+.carta3d .tacca.s{left:-11px}.carta3d .tacca.d{right:-11px}
+.carta3d small{display:block;font-weight:800;font-size:11px;letter-spacing:.14em;color:#2236d6}
+.carta3d strong{display:block;font-size:30px;font-weight:900;line-height:1.05;margin:6px 0 10px}
+.carta3d .linea{border-top:2px dashed #c9cce0;margin:12px 0}
+.carta3d span{display:block;font-size:14px;font-weight:700;color:#2a2f5a}
+.carta3d img{width:40px;height:40px;border-radius:50%;float:right}
+.galleggia{position:absolute;z-index:3;background:var(--giallo);color:var(--navy);font-weight:900;font-size:14px;padding:8px 14px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.4);animation:su 4s ease-in-out infinite}
+.galleggia.g1{left:0;top:40px;transform:rotate(-3deg)}
+.galleggia.g2{left:24px;top:100px;background:var(--bianco);animation-delay:-2s;transform:rotate(3deg)}
+@keyframes su{50%{translate:0 -10px}}
+@media (prefers-reduced-motion:reduce){.galleggia{animation:none}.carta3d{transition:none}}
+@media (max-width:860px){
+  .appunt .riquadro{grid-template-columns:1fr;padding:36px 22px}
+  .scena{height:440px}
+  .scena .persona{width:320px;height:450px;right:-30px}
+  .carta3d{width:250px;bottom:40px}
+}
+@media (max-width:600px){.galleggia.g2{display:none}.conto-cifre span{min-width:0;flex:1}.conto-cifre b{font-size:28px}.carta3d strong{font-size:24px}}
+
+/* riepilogo */
+.riep{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.riep div{background:var(--navy3);border-radius:16px;padding:20px}
+.riep small{color:var(--giallo);font-weight:900;font-size:24px}
+.riep b{display:block;font-size:18px;margin:6px 0 4px}
+.riep p{font-size:15px;margin:0}
+
+/* domande */
+.faq{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid var(--linea);padding:16px 0}
+summary{cursor:pointer;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--giallo);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0}
+
+/* chiusura */
+.finale{background:radial-gradient(700px 400px at 50% 0%,#1a2a9a,transparent 70%),var(--navy)}
+.finale .pass{margin:30px auto 0}
+.firma{font-size:22px;font-style:italic;color:var(--bianco);margin-top:30px}
+footer{padding:30px 0 40px;font-size:13px;color:var(--grigio);border-top:1px solid var(--linea)}
+footer p{color:var(--grigio);margin:0 0 8px}
+footer a{color:var(--bianco)}
+
+/* pulsante fisso su telefono */
+.fisso{display:none}
+
+@media (max-width:860px){
+  section{padding:48px 0}
+  .perche,.regalo,.chi{grid-template-columns:1fr;gap:28px}
+  .scorri,.rec{grid-template-columns:1fr 1fr}
+  .segreto{grid-template-columns:1fr;gap:12px}
+  .segreto .n{font-size:48px}
+  .casa,.riep{grid-template-columns:1fr 1fr}
+  .hero .ritratto{width:min(330px,70vw);height:460px;right:-20px;top:70px;opacity:.5;-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 90%);mask-image:linear-gradient(180deg,#000 40%,transparent 90%)}
+  .hero::after{display:none}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .top .pillola{display:none}
+  .hero .bolla{display:none}
+  .campi{grid-template-columns:1fr}
+  .chip3,.scorri,.rec,.cifre,.casa,.riep,.perte{grid-template-columns:1fr}
+  .pass-testa,.modulo{padding-left:18px;padding-right:18px}
+  .tusei{display:flex}
+  .tusei button{flex:1;padding:10px 8px}
+  .fisso{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}
+  .fisso .btn{width:100%;padding:15px 20px;font-size:17px}
+  .fisso.nascosto{display:none}
+  footer{padding-bottom:96px}
+}
+</style>
 </head>
 <body>
-<header class="top"><div class="wrap"><span class="brand"><img src="img/logo.png" alt="">Coach Giovy</span></div></header>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marchio" href="#"><b>#</b>BLOCCOMADRE</a>
+    <span class="pillola">Video gratuito · circa 12 minuti · subito</span>
+  </div>
+</header>
 
 <main>
-<section class="hero">
-  <div class="wrap grid">
-    <div>
-      <span class="eyebrow">Per tennisti adulti di circolo</span>
-      <h1>Scopri perché il tuo tennis <span class="giallo">si blocca nei momenti che contano.</span></h1>
-      <p class="lead">Una presentazione gratuita con Coach Giovy per capire la differenza tra il colpo che sbagli e il problema che lo fa cedere.</p>
-      <button class="btn" type="button" data-apri>Guarda il video gratuito</button>
-      <p class="nota">Circa 12 minuti · gratis · ti arriva anche via email</p>
+<!-- 1. APERTURA: tutto l'essenziale senza scorrere, modulo dentro il «pass» -->
+<section class="hero" id="inizio">
+  <div class="ritratto" aria-hidden="true"></div>
+  <span class="bolla">«Il colpo non è il problema.»</span>
+  <div class="wrap">
+    <span class="pillola">Video gratuito per tennisti adulti di circolo</span>
+    <h1 class="titolone"><span class="hash">#</span>Blocco<br>Madre</h1>
+    <p class="sotto">Scopri perché il tuo tennis si blocca nei momenti che contano, e da dove ripartire.</p>
+
+    <div class="pass">
+      <div class="pass-testa">
+        <div><small>Il tuo accesso · gratis</small><strong>Video + videoanalisi</strong><span>guardi subito il video · poi mi mandi il tuo colpo</span></div>
+        <div class="dati" aria-hidden="true"><div><b>12</b><i>minuti</i></div><div><b>1</b><i>videoanalisi</i></div><div><b>0 €</b><i>costo</i></div></div>
+      </div>
+      <div class="strappo"></div>
+      <form class="modulo" novalidate data-modulo>
+        <h3>Iscriviti gratis</h3>
+        <div class="campi">
+          <div><label for="nome1">Nome</label><input type="text" id="nome1" name="nome" autocomplete="given-name" required></div>
+          <div><label for="email1">Email</label><input type="email" id="email1" name="email" autocomplete="email" inputmode="email" required></div>
+          <div class="tutta"><label for="tel1">Telefono con prefisso (facoltativo)</label><input type="tel" id="tel1" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+39 333 1234567"><div class="aiuto">Solo se desideri essere ricontattato.</div></div>
+        </div>
+        <div class="trappola" aria-hidden="true"><label for="sito1">Sito</label><input type="text" id="sito1" name="sito" tabindex="-1" autocomplete="off"></div>
+        <label class="scelta"><input type="checkbox" name="privacy" required> <span>Ho letto l’<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</span></label>
+        <label class="scelta"><input type="checkbox" name="marketing"> <span>Desidero ricevere via email consigli sul tennis, approfondimenti sul metodo e informazioni sui percorsi di Coach Giovy. Posso disiscrivermi in qualsiasi momento.</span></label>
+        <button class="btn" type="submit">Sì, voglio vedere il video<small>E CAPIRE DA DOVE NASCONO I MIEI ERRORI</small></button>
+        <div class="errore" role="alert"></div>
+      </form>
     </div>
-    <div class="foto"><img src="img/coach.jpg" alt="Coach Giovy in campo"></div>
+    <p class="regalino">In regalo con l’iscrizione: la <b>videoanalisi gratuita</b> del tuo colpo e la guida <b>«Il Metodo Coach Giovy»</b> in PDF.</p>
+
+    <div class="chip3">
+      <div><small>SCOPERTA 01</small><b>Il Blocco Madre che fa cedere i colpi</b></div>
+      <div><small>SCOPERTA 02</small><b>Perché troppi consigli ti confondono</b></div>
+      <div><small>SCOPERTA 03</small><b>Il Metodo C.A.M.P.O. e da dove partire</b></div>
+    </div>
   </div>
 </section>
 
+<!-- 2. PERCHÉ GUARDARLO: video breve -->
 <section class="alt">
-  <div class="wrap stretto">
-    <h2>Nel video scopri come</h2>
-    <ul class="lista">
-      <li>Riconoscere i segnali del tuo Blocco Madre.</li>
-      <li>Capire perché tanti consigli possono farti perdere la priorità.</li>
-      <li>Scoprire come funziona il Metodo C.A.M.P.O. e da dove partire.</li>
-    </ul>
-    <p class="cred">Coach Giovy: 25 anni da allenatore, in Italia e nel Sud-est asiatico, dai principianti ai giocatori di alto livello. Istruttore di 1° grado FITP (Federazione Italiana Tennis e Padel).</p>
-    <p style="margin-top:22px"><button class="btn" type="button" data-apri>Guarda il video gratuito</button></p>
+  <div class="wrap perche">
+    <div>
+      <span class="eyebrow">In un minuto</span>
+      <h2>Perché guardare <span class="giallo">il video?</span></h2>
+      <p>Guarda l’inizio: ti spiego a chi parlo e perché vale i tuoi 12 minuti. Il resto lo vedi dopo l’iscrizione.</p>
+      <a class="btn" href="#inizio" data-vai>Guardo il video gratis</a>
+    </div>
+    <div class="schermo"><video controls preload="none" playsinline poster="img/coach-vsl.jpg" src="video/vsl-1.mp4"></video></div>
+  </div>
+</section>
+
+<!-- 3. IL REGALO -->
+<section>
+  <div class="wrap">
+    <div class="regalo">
+      <div>
+        <span class="etichetta">In regalo a chi si iscrive</span>
+        <h2><span class="bianco">La guida</span><br><span class="giallo">Il Metodo Coach Giovy</span></h2>
+        <p style="font-size:20px;color:var(--bianco);font-weight:700">La guida pratica per tennisti adulti: tecnica, corpo e mente che lavorano insieme.</p>
+        <p>Dentro trovi il Blocco Madre, cioè la causa da cercare prima di correggere un colpo, e tre capitoli pratici con esercizi e una verifica alla fine di ognuno, per misurare i progressi con numeri semplici e non a sensazione.</p>
+        <div class="numeri">
+          <div><b>20</b><span>pagine</span></div>
+          <div><b>9</b><span>capitoli</span></div>
+          <div><b>3</b><span>pilastri: tecnica, corpo, mente</span></div>
+        </div>
+      </div>
+      <div class="libro" aria-hidden="true">
+        <span class="timbro">GRATIS<i>PER GLI ISCRITTI</i></span>
+        <img src="img/logo.png" alt="">
+        <small>LA GUIDA DI COACH GIOVY</small>
+        <strong>Il Metodo<br>Coach Giovy</strong>
+        <span>Tecnica · Corpo · Mente · guida pratica in PDF</span>
+      </div>
+    </div>
+    <div class="scorri">
+      <div class="carta"><div class="num">01</div><h3>Prima la causa</h3><p>Il Blocco Madre: l’errore che vedi è spesso l’ultimo anello di una catena.</p></div>
+      <div class="carta"><div class="num">02</div><h3>La tecnica</h3><p>Colpi solidi, ripetibili e sicuri, con serie controllate da annotare.</p></div>
+      <div class="carta"><div class="num">03</div><h3>Il corpo</h3><p>Un allenamento fisico che sostiene il tuo tennis invece di limitarlo.</p></div>
+      <div class="carta"><div class="num">04</div><h3>La mente</h3><p>Tornare presente subito dopo un errore, con la visualizzazione prima del punto.</p></div>
+    </div>
+    <p class="centro" style="margin-top:30px"><a class="btn" href="#inizio" data-vai>Mi iscrivo e ricevo la guida</a></p>
+  </div>
+</section>
+
+<!-- 3b. VIDEOANALISI GRATUITA: il regalo che quasi nessuno fa -->
+<section class="alt" id="videoanalisi">
+  <div class="wrap">
+    <div class="va-testa">
+      <div>
+        <span class="bollino">🎥 Videoanalisi gratuita</span>
+        <h2>Mandami il tuo colpo. <span class="giallo">Lo guardo io.</span></h2>
+        <p style="font-size:20px;color:var(--bianco);font-weight:700">Il video ti spiega il metodo. La videoanalisi gratuita ti dice dove si blocca il tuo tennis.</p>
+        <p>Chi si iscrive può mandarmi su WhatsApp 20-30 secondi del colpo che gli fa perdere più punti. Ti rispondo io, con la mia voce: una cosa che vedo, perché succede e l’esercizio da fare questa settimana.</p>
+        <span class="limite">Massimo 3 videoanalisi al giorno, in ordine di arrivo</span>
+      </div>
+      <div class="telefono" aria-hidden="true">
+        <div class="barra"><img src="img/logo.png" alt=""><div>Coach Giovy<small>online</small></div></div>
+        <div class="chat">
+          <div class="msg lui">Ciao Coach, il rovescio in partita mi tradisce sempre 😩</div>
+          <div class="msg lui video"><i>▶</i>Video · 0:28</div>
+          <div class="msg io"><div class="vocale"><i>▶</i><span></span>1:24</div><span class="ora">Coach Giovy</span></div>
+          <div class="msg io">Il piede si ferma prima del colpo. Questa settimana: 3 serie da 10, piede avanti prima di aprire. Poi rimandami il video 💪</div>
+          <div class="msg lui">Grazie! Lo provo domani al circolo 🎾</div>
+        </div>
+      </div>
+    </div>
+    <div class="passi">
+      <div><b>Ti iscrivi e guardi il video</b><p>Circa 12 minuti, per capire cos’è il Blocco Madre.</p></div>
+      <div><b>Mi mandi il tuo colpo</b><p>20-30 secondi su WhatsApp: il colpo che ti fa perdere più punti.</p></div>
+      <div><b>Ti rispondo io con un vocale</b><p>Una cosa vista, il perché, un esercizio. Niente videochiamate.</p></div>
+      <div><b>Dopo una settimana, rivediamo</b><p>Mi rimandi il colpo e vediamo insieme la differenza.</p></div>
+    </div>
+    <div class="filma">
+      <h3>Come filmare il tuo colpo</h3>
+      <ul>
+        <li><b>📱</b>Telefono in orizzontale</li>
+        <li><b>🎾</b>Dietro la riga di fondo o di lato</li>
+        <li><b>🧍</b>Corpo intero, piedi compresi</li>
+        <li><b>🔁</b>8-10 colpi di fila, 20-30 secondi</li>
+      </ul>
+    </div>
+    <p class="esempio">Chat di esempio: mostra come funziona la videoanalisi, non è la conversazione con un allievo reale. Il tuo video resta privato: non lo pubblico senza il tuo permesso scritto.</p>
+    <p class="centro" style="margin-top:22px"><a class="btn" href="#inizio" data-vai>Mi iscrivo e mando il mio colpo</a></p>
+  </div>
+</section>
+
+<!-- 4. IL PROBLEMA, CON «TU SEI» -->
+<section class="alt">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Prima di tutto</span>
+    <h2>Se vuoi giocare meglio in partita, <span class="giallo">prima devi sapere cosa si rompe.</span></h2>
+    <p>Tu sei:</p>
+    <div class="tusei" role="group" aria-label="Che giocatore sei">
+      <button type="button" aria-pressed="true" data-tipo="tornei">Gioco tornei e campionati</button>
+      <button type="button" aria-pressed="false" data-tipo="amici">Gioco per passione</button>
+    </div>
+    <div class="risposta" data-risposta="tornei">
+      <p>In allenamento giochi bene. In partita, sul punto che conta, il braccio si irrigidisce e il colpo che di solito entra finisce in rete. Perdi partite che sapevi di poter vincere.</p>
+    </div>
+    <div class="risposta" data-risposta="amici" hidden>
+      <p>Ami il tennis, ci giochi da anni, ma fai sempre gli stessi errori. Prendi lezioni, guardi video, provi consigli nuovi, e dopo un po’ sei di nuovo al punto di partenza.</p>
+    </div>
+    <p>Il motivo, quasi sempre, è che ti stai allenando sul problema sbagliato. Il colpo che vedi sbagliare è solo l’ultimo anello. Il problema vero sta prima, e finché resta lì ogni correzione dura poco.</p>
+    <p class="obiezione">«Va bene, Coach. Ma alla mia età, con il tempo che ho, cosa posso cambiare davvero?»</p>
+    <p class="qui">È DA QUI CHE PARTE IL VIDEO.</p>
+  </div>
+</section>
+
+<!-- 5. LA PROVA -->
+<section>
+  <div class="wrap">
+    <div class="prova-testa">
+      <span class="eyebrow">La prova, in campo</span>
+      <h2>Il metodo, <span class="giallo">raccontato da chi l’ha fatto.</span></h2>
+      <p>Recensioni registrate a fine corso Tennis Power Formula, a Bangkok, nell’ottobre 2025. Ognuno parla nella sua lingua: sotto trovi la traduzione.</p>
+    </div>
+    <div class="rec">
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-allievo.jpg" src="video/recensione-allievo.mp4"></video>
+        <figcaption><b>Allievo del corso</b> · in inglese<br>«Dopo circa sei settimane sono diventato molto più costante e anche più forte mentalmente in campo.»</figcaption>
+      </figure>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-giappone.jpg" src="video/recensione-giappone.mp4"></video>
+        <figcaption><b>Allieva dal Giappone</b> · in giapponese<br>«Con il coach ho trovato stabilità di palla, chiarezza e fiducia.»</figcaption>
+      </figure>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-fon-thailandia.jpg" src="video/recensione-fon-thailandia.mp4"></video>
+        <figcaption><b>Fon, Thailandia</b> · in thailandese<br>«Le tecniche e il modo di pensare il gioco hanno cambiato completamente il mio tennis.»</figcaption>
+      </figure>
+      <figure class="testim">
+        <video controls preload="none" playsinline poster="img/poster-inglese.jpg" src="video/recensione-inglese.mp4"></video>
+        <figcaption><b>Allieva, livello intermedio</b> · in inglese<br>«Dopo sei-sette settimane sono migliorata molto nei colpi da fondo, nel fisico e nel gioco.»</figcaption>
+      </figure>
+    </div>
+    <div class="cifre">
+      <div><b>25 anni</b><span>da allenatore, dai principianti ai giocatori di alto livello</span></div>
+      <div><b>3 paesi</b><span>Italia, Vietnam e Thailandia</span></div>
+      <div><b>FITP</b><span>Istruttore di 1° grado, Federazione Italiana Tennis e Padel</span></div>
+    </div>
+    <p class="avvertenza">I risultati raccontati dagli allievi dipendono da fattori individuali e non costituiscono garanzia di risultato. Testimonianze di allievi reali del corso Tennis Power Formula di Bangkok (ottobre 2025), pubblicate con il loro consenso.</p>
+    <p class="centro" style="margin-top:24px"><a class="btn" href="#inizio" data-vai>Voglio vedere il video gratis</a></p>
+  </div>
+</section>
+
+<!-- 6. LE TRE SCOPERTE -->
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Il cuore del video</span>
+    <h2>Le tre scoperte <span class="giallo">del Blocco Madre</span></h2>
+    <div class="segreti">
+      <div class="segreto">
+        <div class="n">01</div>
+        <div><h3>Il Blocco Madre che fa cedere i colpi</h3><p>Tu vedi il rovescio che crolla. Io vedo il piede che si è fermato mezzo secondo prima. Scopri perché il colpo che sbagli non è il problema, ma il segnale.</p></div>
+        <div class="fumetti"><div class="fumetto">«Perché in partita sbaglio sempre lo stesso colpo?»</div><div class="fumetto giallo">Guarda cosa succede prima.</div></div>
+      </div>
+      <div class="segreto">
+        <div class="n">02</div>
+        <div><h3>Perché troppi consigli ti confondono</h3><p>Ogni maestro, ogni video, ogni amico al circolo ti dà una correzione diversa. Scopri perché sommarle ti fa perdere la priorità, e come sceglierne una sola.</p></div>
+        <div class="fumetti"><div class="fumetto">«Mi hanno detto di girare le spalle, di anticipare, di piegarmi…»</div><div class="fumetto giallo">Uno solo, non dieci.</div></div>
+      </div>
+      <div class="segreto">
+        <div class="n">03</div>
+        <div><h3>Il Metodo C.A.M.P.O. e da dove partire</h3><p>Una sequenza in cinque passi per passare dalla diagnosi a un numero in partita che puoi contare da solo, con i tuoi orari e non con quelli di un professionista.</p></div>
+        <div class="campo5" aria-label="Chiarezza, Analisi video, Movimento, Piano pratico, Obiettivo">
+          <div><b>C</b><span>Chiarezza</span></div><div><b>A</b><span>Analisi</span></div><div><b>M</b><span>Movimento</span></div><div><b>P</b><span>Piano</span></div><div><b>O</b><span>Obiettivo</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="centro" style="margin-top:30px"><a class="btn" href="#inizio" data-vai>Guardo il video gratis</a></p>
+  </div>
+</section>
+
+<!-- 7. COSA PORTI A CASA -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">12 minuti, sei cose concrete</span>
+    <h2>Cosa porti a casa <span class="giallo">dal video</span></h2>
+    <div class="casa">
+      <div><small>01</small><b>Come riconoscere i segnali del tuo Blocco Madre</b></div>
+      <div><small>02</small><b>Perché in allenamento giochi bene e in partita no</b></div>
+      <div><small>03</small><b>La differenza tra il colpo che sbagli e il problema che lo fa cedere</b></div>
+      <div><small>04</small><b>Come scegliere una correzione sola invece di dieci</b></div>
+      <div><small>05</small><b>I cinque passi del Metodo C.A.M.P.O.</b></div>
+      <div><small>06</small><b>Da dove partire questa settimana, con il tempo che hai</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. CHI È COACH GIOVY -->
+<section class="alt">
+  <div class="wrap chi">
+    <div class="foto"><img src="img/coach-vsl-ritratto.jpg" alt="Coach Giovy, Giovanni Leto" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Chi ti spiega il metodo</span>
+      <h2>Coach<br><span class="giallo">Giovy</span></h2>
+      <p>Mi chiamo Giovanni Leto. Ho iniziato a giocare a dieci anni; poi gli infortuni hanno chiuso il sogno di diventare professionista, e ho capito che non dovevo essere io in campo per essere utile.</p>
+      <p>Da 25 anni alleno, in Italia e nel Sud-est asiatico, dai principianti ai giocatori di alto livello. Allenando adulti ho visto sempre lo stesso schema: persone motivate, bloccate non per mancanza di voglia, ma perché si allenano sul problema sbagliato.</p>
+      <p class="frase">Tu vedi il rovescio che crolla. Io vedo il piede che si è fermato mezzo secondo prima.</p>
+      <a class="btn" href="#inizio" data-vai>Voglio vedere il video gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. È PER TE SE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Prima di iscriverti</span>
+    <h2>È per te? <span class="giallo">Dimmelo tu.</span></h2>
+    <div class="perte">
+      <div class="si">
+        <h3>È per te se</h3>
+        <ul>
+          <li>Sei un adulto che gioca al circolo, fa tornei o sfide con gli amici.</li>
+          <li>In allenamento giochi bene, ma in partita il tuo tennis si blocca.</li>
+          <li>Hai provato lezioni e consigli, e gli errori tornano sempre.</li>
+          <li>Hai poco tempo e vuoi sapere su cosa lavorare per primo.</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Lascia stare se</h3>
+        <ul>
+          <li>Cerchi il trucco che ti cambia il tennis in una lezione.</li>
+          <li>Non sei disposto a guardare il tuo gioco con occhi diversi.</li>
+          <li>Hai meno di 18 anni: i percorsi sono riservati ai maggiorenni.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. LA SCALETTA DEL VIDEO -->
+<section class="alt">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Circa 12 minuti · lo guardi quando vuoi</span>
+    <h2>La scaletta <span class="giallo">del video</span></h2>
+    <ol class="scaletta">
+      <li><small>APERTURA</small><b>Chi sono e perché ti parlo</b><p>Cosa vedo in campo da 25 anni allenando adulti.</p></li>
+      <li><small>SCOPERTA 01</small><b>Il Blocco Madre</b><p>Da dove nascono davvero gli errori che vedi in partita.</p></li>
+      <li><small>SCOPERTA 02</small><b>Troppi consigli</b><p>Perché sommare correzioni ti fa perdere la priorità.</p></li>
+      <li><small>SCOPERTA 03</small><b>Il Metodo C.A.M.P.O.</b><p>I cinque passi e da dove partire.</p></li>
+      <li><small>CHIUSURA</small><b>Il tuo prossimo passo</b><p>Come andare avanti da solo, con il tempo che hai.</p></li>
+    </ol>
+    <p>Tieni a portata di mano carta e penna, o il telefono per gli appunti.</p>
+  </div>
+</section>
+
+<!-- 10b. APPUNTAMENTO: data grande, scena 3D e conto alla rovescia vero (Black Friday 27-30/11/2026) -->
+<section class="appunt" id="appuntamento">
+  <div class="wrap">
+    <div class="riquadro">
+      <div class="testi">
+        <span class="eyebrow" data-bf>L’appuntamento · Black Friday · dal 27 al 30 novembre</span>
+        <span class="eyebrow" data-dopo-bf hidden>Il tuo prossimo passo</span>
+        <div class="data-grande" data-bf>27.11</div>
+        <h2 data-bf>Guarda il video <span class="giallo">prima del 27 novembre</span></h2>
+        <h2 data-dopo-bf hidden>Trova il tuo Blocco Madre <span class="giallo">oggi stesso</span></h2>
+        <div class="righe">
+          <div><i>🏆</i><div><b>Se giochi tornei</b><p>Pensa a cosa cambierebbe arrivare alla prossima partita sapendo esattamente su cosa hai lavorato.</p></div></div>
+          <div><i>🎾</i><div><b>Se giochi per passione</b><p>Pensa a cosa cambierebbe smettere di fare sempre lo stesso errore nelle partite con gli amici.</p></div></div>
+        </div>
+        <p class="bf-frase" data-bf>Dal 27 al 30 novembre il Playbook e Fisico da Match si prendono insieme a 27 €. Chi ha già visto il video sa da dove partire. E la videoanalisi gratuita del tuo colpo resta, anche nel Black Friday.</p>
+        <div class="conto" data-bf data-apre="2026-11-27T00:00:00+01:00" data-chiude="2026-12-01T00:00:00+01:00" data-prima="Il Black Friday apre tra" data-durante="Il Black Friday finisce tra" data-dopo="Black Friday chiuso"></div>
+      </div>
+      <div class="scena" aria-hidden="true">
+        <span class="galleggia g1" data-bf>2 guide a 27 €</span>
+        <span class="galleggia g2">🎥 Videoanalisi gratuita</span>
+        <div class="persona"></div>
+        <div class="carta3d" id="carta3d">
+          <span class="tacca s"></span><span class="tacca d"></span>
+          <img src="img/logo.png" alt="">
+          <small>IL TUO ACCESSO · GRATIS</small>
+          <strong>#Blocco<br>Madre</strong>
+          <span>Video con Coach Giovy</span>
+          <div class="linea"></div>
+          <span data-bf>Black Friday · 27–30 novembre</span>
+          <span data-dopo-bf hidden>Guardi subito, dal telefono o dal PC</span>
+        </div>
+      </div>
+    </div>
+    <p class="centro" style="margin-top:28px"><a class="btn" href="#inizio" data-vai>Guardo il video gratis</a></p>
+  </div>
+</section>
+
+<!-- 11. RIEPILOGO -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Riepilogo · tutto gratis</span>
+    <h2>Ti iscrivi una volta, <span class="giallo">ricevi tre cose</span></h2>
+    <div class="riep">
+      <div><small>01</small><b>Il video gratuito</b><p>Circa 12 minuti con Coach Giovy, lo guardi subito nella pagina successiva.</p></div>
+      <div><small>02</small><b>La guida in regalo</b><p>«Il Metodo Coach Giovy» in PDF, 20 pagine e 9 capitoli.</p></div>
+      <div><small>03</small><b>La videoanalisi gratuita</b><p>Mi mandi 20-30 secondi del tuo colpo e ti rispondo io con un vocale. Massimo 3 al giorno.</p></div>
+    </div>
+    <p class="centro"><a class="btn" href="#inizio" data-vai>Mi iscrivo gratis</a></p>
+  </div>
+</section>
+
+<!-- 12. DOMANDE -->
+<section class="alt">
+  <div class="faq">
+    <div class="wrap">
+      <span class="eyebrow">Domande frequenti</span>
+      <h2>Quello che mi chiedono <span class="giallo">prima di iscriversi</span></h2>
+      <details><summary>Quanto costa?</summary><p>Niente. Ti iscrivi con nome ed email e guardi subito il video. Il telefono è facoltativo.</p></details>
+      <details><summary>Quanto dura il video?</summary><p>Circa 12 minuti. Lo guardi subito nella pagina successiva e ti arriva anche via email.</p></details>
+      <details><summary>Funziona anche al mio livello?</summary><p>Il video è pensato per adulti che giocano al circolo: chi fa tornei e campionati e chi gioca per passione con gli amici.</p></details>
+      <details><summary>Devo comprare qualcosa?</summary><p>No. Il video è gratuito e non comporta alcun obbligo di acquisto. Sotto il video trovi anche le mie guide, se vuoi andare avanti da solo.</p></details>
+      <details><summary>Devo fare una videochiamata?</summary><p>No. Guardi il video e decidi tu. Se hai una domanda scrivimi su WhatsApp al 351 794 0376: ti rispondo io.</p></details>
+      <details><summary>Posso rivedere il video?</summary><p>Sì. Ti mando il link via email, così lo riapri quando vuoi.</p></details>
+      <details><summary>Come funziona la videoanalisi gratuita?</summary><p>Dopo l’iscrizione mi mandi su WhatsApp 20-30 secondi del colpo che ti fa perdere più punti. Ti rispondo io con un vocale: una cosa che vedo, perché succede e un esercizio. Ne faccio al massimo 3 al giorno, in ordine di arrivo.</p></details>
+      <details><summary>Che fine fa il mio video?</summary><p>Resta privato: lo uso solo per la tua videoanalisi e non lo pubblico senza il tuo permesso scritto.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 13. CHIUSURA CON SECONDO MODULO -->
+<section class="finale" id="ultimo">
+  <div class="wrap centro">
+    <span class="eyebrow">Ultimo passo</span>
+    <h2>Smetti di correggere sintomi. <span class="giallo">Trova il tuo Blocco Madre.</span></h2>
+    <div class="pass" style="text-align:left">
+      <div class="pass-testa">
+        <div><small>Il tuo accesso · gratis</small><strong>Iscriviti gratis</strong><span>Video, guida in regalo e videoanalisi gratuita del tuo colpo.</span></div>
+      </div>
+      <div class="strappo"></div>
+      <form class="modulo" novalidate data-modulo>
+        <div class="campi">
+          <div><label for="nome2">Nome</label><input type="text" id="nome2" name="nome" autocomplete="given-name" required></div>
+          <div><label for="email2">Email</label><input type="email" id="email2" name="email" autocomplete="email" inputmode="email" required></div>
+          <div class="tutta"><label for="tel2">Telefono con prefisso (facoltativo)</label><input type="tel" id="tel2" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+39 333 1234567"></div>
+        </div>
+        <div class="trappola" aria-hidden="true"><label for="sito2">Sito</label><input type="text" id="sito2" name="sito" tabindex="-1" autocomplete="off"></div>
+        <label class="scelta"><input type="checkbox" name="privacy" required> <span>Ho letto l’<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</span></label>
+        <label class="scelta"><input type="checkbox" name="marketing"> <span>Desidero ricevere via email consigli sul tennis, approfondimenti sul metodo e informazioni sui percorsi di Coach Giovy. Posso disiscrivermi in qualsiasi momento.</span></label>
+        <button class="btn" type="submit">Guardo il video gratis<small>E MANDO IL MIO COLPO PER LA VIDEOANALISI</small></button>
+        <div class="errore" role="alert"></div>
+      </form>
+    </div>
+    <p class="firma">«Ci vediamo nel video. Porta carta e penna.»<br><span class="giallo">Coach Giovy</span></p>
   </div>
 </section>
 </main>
+
+<div class="fisso" id="fisso"><a class="btn" href="#inizio" data-vai>Guardo il video gratis</a></div>
 
 <footer>
   <div class="wrap">
@@ -50,72 +724,115 @@
   </div>
 </footer>
 
-<div class="velo" id="velo" role="dialog" aria-modal="true" aria-labelledby="titolo-modulo">
-  <form class="modulo" id="modulo" novalidate>
-    <button class="chiudi" type="button" aria-label="Chiudi" data-chiudi>×</button>
-    <h2 id="titolo-modulo">Dove ti mando il video?</h2>
-    <p>Lo guardi subito nella pagina successiva e ti arriva anche via email.</p>
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" autocomplete="given-name" required>
-    <label for="email">Email a cui inviare il video</label>
-    <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
-    <label for="telefono">Telefono con prefisso internazionale</label>
-    <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="+39 333 1234567">
-    <div class="aiuto">Facoltativo, se desideri essere ricontattato per la diagnosi.</div>
-    <div class="trappola" aria-hidden="true"><label for="sito">Sito</label><input type="text" id="sito" name="sito" tabindex="-1" autocomplete="off"></div>
-    <label class="scelta"><input type="checkbox" id="privacy" required> <span>Ho letto l’<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</span></label>
-    <label class="scelta"><input type="checkbox" id="marketing"> <span>Desidero ricevere via email consigli sul tennis, approfondimenti sul metodo e informazioni sui percorsi di Coach Giovy. Posso disiscrivermi in qualsiasi momento.</span></label>
-    <div class="aiuto">Il video è gratuito. Puoi riceverlo anche senza scegliere le email di consigli e novità.</div>
-    <button class="btn" type="submit" id="invia">Guarda il video gratuito</button>
-    <div class="errore" id="errore" role="alert"></div>
-  </form>
-</div>
-
 <script>
-// URL /exec dell'app web Apps Script «Coach Giovy – Mailing list» (funnel-vsl.gs).
+// URL /exec dell'app web Apps Script «Coach Giovy – Mailing list» (funnel-vsl.gs). Stesso invio di iscrizione.html.
 var APP_WEB = 'https://script.google.com/macros/s/AKfycbwlHvx2YS1gs6gMp8uABJ0IOyPddcCSTr8Yf8B0y3kzy8Sx8E0BjAoMCmCX_fZ6MduxsQ/exec';
-var velo = document.getElementById('velo');
-var modulo = document.getElementById('modulo');
-var errore = document.getElementById('errore');
-document.querySelectorAll('[data-apri]').forEach(function (b) {
-  b.addEventListener('click', function () { velo.classList.add('aperto'); document.getElementById('nome').focus(); });
+
+// I pulsanti portano al modulo in apertura e mettono il cursore sul nome.
+document.querySelectorAll('[data-vai]').forEach(function (a) {
+  a.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('inizio').scrollIntoView({behavior: 'smooth'});
+    setTimeout(function () { document.getElementById('nome1').focus({preventScroll: true}); }, 600);
+  });
 });
-document.querySelector('[data-chiudi]').addEventListener('click', function () { velo.classList.remove('aperto'); });
-velo.addEventListener('click', function (e) { if (e.target === velo) velo.classList.remove('aperto'); });
-document.addEventListener('keydown', function (e) { if (e.key === 'Escape') velo.classList.remove('aperto'); });
+
+// «Tu sei»: cambia il testo secondo il tipo di giocatore.
+document.querySelectorAll('[data-tipo]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('[data-tipo]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+    document.querySelectorAll('[data-risposta]').forEach(function (r) { r.hidden = r.dataset.risposta !== b.dataset.tipo; });
+  });
+});
+
+// Pulsante fisso su telefono: si nasconde quando l'apertura o la chiusura (con i moduli) sono a vista.
+var fisso = document.getElementById('fisso');
+if ('IntersectionObserver' in window) {
+  var visibili = new Set();
+  var oss = new IntersectionObserver(function (voci) {
+    voci.forEach(function (v) { if (v.isIntersecting) visibili.add(v.target); else visibili.delete(v.target); });
+    fisso.classList.toggle('nascosto', visibili.size > 0);
+  });
+  document.querySelectorAll('#inizio, #ultimo').forEach(function (m) { oss.observe(m); });
+}
+
+// Conto alla rovescia verso una scadenza vera e uguale per tutti: Black Friday 27/11-30/11/2026, ora italiana.
+// Mai un timer che riparte a ogni visita (art. 23 lett. g Codice del consumo). Finito il Black Friday la sezione resta senza conto.
+(function () {
+  var box = document.querySelector('.conto[data-chiude]');
+  var apre = Date.parse(box.dataset.apre), chiude = Date.parse(box.dataset.chiude);
+  box.innerHTML = '<p class="conto-titolo"></p><div class="conto-cifre">' +
+    ['giorni', 'ore', 'min', 'sec'].map(function (e) { return '<span><b>00</b><small>' + e + '</small></span>'; }).join('') + '</div>';
+  var titolo = box.querySelector('.conto-titolo'), cifre = box.querySelectorAll('b'), timer;
+  function due(n) { return (n < 10 ? '0' : '') + n; }
+  function giro() {
+    var ora = Date.now();
+    if (ora >= chiude) {
+      document.querySelectorAll('[data-bf]').forEach(function (x) { x.hidden = true; });
+      document.querySelectorAll('[data-dopo-bf]').forEach(function (x) { x.hidden = false; });
+      clearInterval(timer); return;
+    }
+    var meta = ora < apre ? apre : chiude;
+    titolo.textContent = ora < apre ? box.dataset.prima : box.dataset.durante;
+    var r = Math.floor((meta - ora) / 1000);
+    [Math.floor(r / 86400), Math.floor(r % 86400 / 3600), Math.floor(r % 3600 / 60), r % 60].forEach(function (v, i) { cifre[i].textContent = due(v); });
+  }
+  giro(); timer = setInterval(giro, 1000);
+})();
+
+// Carta 3D: si inclina seguendo il mouse o lo scorrimento (niente movimento se il sistema chiede meno animazioni).
+(function () {
+  var c = document.getElementById('carta3d');
+  if (!c || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var base = 'rotateY(22deg) rotateX(10deg) rotateZ(-6deg)';
+  var scena = c.closest('.riquadro');
+  scena.addEventListener('pointermove', function (e) {
+    var r = scena.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    c.style.transform = 'rotateY(' + (22 + x * 16) + 'deg) rotateX(' + (10 - y * 14) + 'deg) rotateZ(-6deg) translateZ(30px)';
+  });
+  scena.addEventListener('pointerleave', function () { c.style.transform = base; });
+  addEventListener('scroll', function () {
+    var r = scena.getBoundingClientRect(), k = Math.max(-1, Math.min(1, (r.top + r.height / 2 - innerHeight / 2) / innerHeight));
+    if (!scena.matches(':hover')) c.style.transform = 'rotateY(' + (22 + k * 10) + 'deg) rotateX(' + (10 + k * 6) + 'deg) rotateZ(-6deg)';
+  }, {passive: true});
+})();
 
 // Fonte e campagna dagli UTM dell'annuncio (nessun dato personale nell'URL).
 var q = new URLSearchParams(location.search);
 var fonte = q.get('utm_source') || (document.referrer ? new URL(document.referrer).hostname : 'diretto');
 var campagna = [q.get('utm_campaign'), q.get('utm_content')].filter(Boolean).join(' · ');
 
-modulo.addEventListener('submit', function (e) {
-  e.preventDefault();
-  errore.textContent = '';
-  var nome = document.getElementById('nome').value.trim();
-  var email = document.getElementById('email').value.trim();
-  var tel = document.getElementById('telefono').value.trim();
-  var dubbio = controllaDati(nome, email, tel);
-  if (dubbio) return mostra(dubbio);
-  if (!document.getElementById('privacy').checked) return mostra('Per ricevere il video spunta la presa visione dell’informativa privacy.');
-  if (!APP_WEB) return mostra('Modulo non ancora collegato. Scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
-  var b = document.getElementById('invia');
-  b.disabled = true; b.textContent = 'Un attimo…';
-  fetch(APP_WEB, {method: 'POST', body: JSON.stringify({
-    nome: nome, email: email, telefono: tel,
-    privacy: true, marketing: document.getElementById('marketing').checked,
-    sito: document.getElementById('sito').value, fonte: fonte, campagna: campagna
-  })}).then(function (r) { return r.json(); }).then(function (r) {
-    if (!r.ok) throw new Error(r.errore);
-    location.href = 'video.html?iscritto=1';
-  }).catch(function () {
-    b.disabled = false; b.textContent = 'Guarda il video gratuito';
-    mostra('Qualcosa non ha funzionato. Riprova tra un minuto o scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
+document.querySelectorAll('[data-modulo]').forEach(function (modulo) {
+  var errore = modulo.querySelector('.errore');
+  var b = modulo.querySelector('button[type=submit]');
+  var testoPulsante = b.innerHTML;
+  function mostra(t) { errore.textContent = t; }
+  modulo.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errore.textContent = '';
+    var nome = modulo.nome.value.trim();
+    var email = modulo.email.value.trim();
+    var tel = modulo.telefono.value.trim();
+    var dubbio = controllaDati(nome, email, tel);
+    if (dubbio) return mostra(dubbio);
+    if (!modulo.privacy.checked) return mostra('Per ricevere il video spunta la presa visione dell’informativa privacy.');
+    if (!APP_WEB) return mostra('Modulo non ancora collegato. Scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
+    b.disabled = true; b.textContent = 'Un attimo…';
+    fetch(APP_WEB, {method: 'POST', body: JSON.stringify({
+      nome: nome, email: email, telefono: tel,
+      privacy: true, marketing: modulo.marketing.checked,
+      sito: modulo.sito.value, fonte: fonte, campagna: campagna
+    })}).then(function (r) { return r.json(); }).then(function (r) {
+      if (!r.ok) throw new Error(r.errore);
+      location.href = 'video.html?iscritto=1';
+    }).catch(function () {
+      b.disabled = false; b.innerHTML = testoPulsante;
+      mostra('Qualcosa non ha funzionato. Riprova tra un minuto o scrivimi TENNIS su WhatsApp: +39 351 794 0376.');
+    });
   });
 });
-function mostra(t) { errore.textContent = t; }
 
-// Filtro dei dati finti o incompleti (06/11/2026). Stesse regole in funnel-vsl.gs.
+// Filtro dei dati finti o incompleti (06/11/2026). Stesse regole in funnel-vsl.gs e iscrizione.html.
 var FINTI = ['test', 'prova', 'asdf', 'qwerty', 'xxx', 'aaa', 'abc', 'nome', 'pippo'];
 var USA_E_GETTA = ['mailinator.com', 'yopmail.com', 'yopmail.fr', 'guerrillamail.com', 'sharklasers.com',
   '10minutemail.com', 'temp-mail.org', 'tempmail.com', 'trashmail.com', 'getnada.com', 'dispostable.com',
@@ -133,14 +850,14 @@ function telefonoFinto(tel) {
     n = n.replace(/^00/, '');
     if (/^39/.test(n)) n = n.slice(2); else estero = true;
   } else if (/^0393\d{8,9}$/.test(n)) {
-    n = n.slice(3);  // «039» scritto al posto di +39 davanti al cellulare
+    n = n.slice(3);
   }
-  if (/(\d)\1{5,}/.test(n)) return true;                 // 000000, 1111111…
-  if (n.replace(/(\d)(?=.*\1)/g, '').length < 3) return true;  // al massimo due cifre diverse
+  if (/(\d)\1{5,}/.test(n)) return true;
+  if (n.replace(/(\d)(?=.*\1)/g, '').length < 3) return true;
   if (/0123456|1234567|2345678|3456789|9876543|8765432|7654321|6543210/.test(n)) return true;
   if (estero) return n.length < 8 || n.length > 15;
-  if (/^3/.test(n)) return n.length < 9 || n.length > 10;  // cellulare italiano
-  if (/^0/.test(n)) return n.length < 6 || n.length > 11;  // fisso italiano
+  if (/^3/.test(n)) return n.length < 9 || n.length > 10;
+  if (/^0/.test(n)) return n.length < 6 || n.length > 11;
   return true;
 }
 function controllaDati(nome, email, tel) {
