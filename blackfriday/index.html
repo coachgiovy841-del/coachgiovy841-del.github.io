@@ -10,7 +10,7 @@
 <link rel="icon" href="../img/logo.png">
 <!-- Pagina Black Friday dal copione «Black Friday - Script pagina.md», approvata dal titolare il 15/11/2026 («Approvo la pagina»).
      Tre fasi automatiche, uguali per tutti (ora italiana): attesa fino al 27/11 00:00, offerta aperta fino al 01/12 00:00, poi chiusa.
-     Link Stripe del pacchetto a 27 € DA CREARE: finche' manca, il pulsante porta a WhatsApp «BLACK». -->
+     Prima del 27/11 i pulsanti portano a WhatsApp «BLACK»; dal 27 al 30/11 al pagamento Stripe. -->
 <style>
 :root{--navy:#050A30;--navy2:#0b1446;--navy3:#14205e;--giallo:#FFFF00;--bianco:#fff;--testo:#d9dcec;--grigio:#9aa0bd;--linea:rgba(255,255,255,.12);--blu:#2236d6}
 *{box-sizing:border-box}
@@ -359,8 +359,9 @@ footer a{color:var(--bianco)}
 </footer>
 
 <script>
-// Link Stripe del pacchetto Black Friday 27 € (Playbook + Fisico da Match): DA CREARE e provare a 0 € prima del 27/11.
-var PACCHETTO_BF = '';
+// Link Stripe del pacchetto Black Friday 27 € (Playbook + Fisico da Match), plink_1Uc535K7nILDvXLAw202pS74, creato e provato a 0 € il 15/11/2026;
+// conferma su grazie-guide.html, Schede da campo 12 € come vendita incrociata. Da disattivare su Stripe il 01/12.
+var PACCHETTO_BF = 'https://buy.stripe.com/dRmcN65EV9BcfspbNy9bO08';
 var BLACK = 'https://wa.me/393517940376?text=' + encodeURIComponent('BLACK - Avvisami quando apre il Black Friday delle 2 guide a 27 €');
 // ?fase=attesa|aperta|chiusa solo per le prove.
 var forzata = new URLSearchParams(location.search).get('fase');
